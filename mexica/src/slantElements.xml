@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slantElements>
+    <characters>          
+        <character id="Tlatoani" name="tlatoani" article="the" />
+        <character id="Priest" name="priest" article="a" />
+        <character id="Prince" name="prince" article="a" />
+        <character id="Eagle_Knight" name="eagle knight" article="an" />
+        <character id="Jaguar_Knight" name="jaguar knight" article="a" />
+        <character id="Farmer" name="farmer" article="a" />
+        <character id="Fisherman" name="fisherman" article="a" />
+        <character id="Artist" name="artist" article="an" />
+        <character id="Hunter" name="hunter" article="a" />
+        <character id="Enemy" name="enemy" article="an" />
+        <character id="Slave" name="slave" article="a" />
+        <character id="Trader" name="trader" article="a" />
+        <character id="Warrior" name="warrior" article="a" />
+        <character id="Princess" name="princess" article="a" />
+        <character id="Lady" name="lady" article="a" />
+        <character id="Virgin" name="virgin" article="a" />
+    </characters>
+    <locations>
+        <location id="City" name="Tenochtitlan city" article="the" />
+        <location id="Jail" name="jail" article="the" />
+        <location id="Lake" name="Texcoco lake" article="the" />
+        <location id="Market" name="Tlaltelolco market" article="the" />
+        <location id="Mountains" name="Popocatepetl volcano" article="the" />
+        <location id="Palace" name="palace" article="the" />
+        <location id="Temple" name="temple" article="the" />
+        <location id="UnknownPosition" name="Chapultepec forest" article="the" />
+    </locations>
+    <things>
+        <thing id="weapon" name="weapon" article="a" />
+        <thing id="eagle" name="eagle" article="an" />
+        <thing id="goat_skin" name="goat skin" article="a" />
+        <thing id="knife" name="knife" article="a" />
+        <thing id="ropes" name="ropes" article="some" />
+        <thing id="curative_plant" name="curative plant" article="a" />
+        <thing id="lance" name="lance" article="a" />
+        <thing id="dagger" name="dagger" article="a" />
+        <thing id="sacred_dagger" name="sacred dagger" article="a" />
+        <thing id="river" name="river" article="a" />
+        <thing id="tattoo" name="tattoo" article="a" />
+        <thing id="murder" name="murder" article="a" />
+        <thing id="knife" name="knife" article="a" />
+        <thing id="obsidian_knife" name="obsidian knife" article="an" />
+        <thing id="sharp_stone" name="sharp stone" article="a" />
+        <thing id="lance" name="lance" article="a" />
+        <thing id="spear" name="spear" article="a" />
+    </things>
+</slantElements>

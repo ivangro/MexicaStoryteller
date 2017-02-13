@@ -1,0 +1,427 @@
+<html>
+    <body>
+
+<h1>Contents</h1>
+<a href="#intro">Introduction to Mexica</a>
+<ol>
+    <li><a href="#mexica">Mexica</a></li>
+    <li><a href="#erModel">Engagement-Reflection Creativity Model</a></li>
+    <ol>
+        <li><a href="#engagement">Engagement mode</a></li>
+        <li><a href="#reflection">Reflection mode</a></li>
+    </ol>
+</ol>
+<a href="#howItWorks">How the system works?</a>
+<ol>
+    <li><a href="#actionsList">Summary of available actions</a></li>
+    <li><a href="#newStory">Creating a new story</a></li>
+    <li><a href="#config">Configuration parameters</a></li>
+    <li><a href="#mainWindow">Main window elements</a></li>
+    <li><a href="#eMode">Working in Engagement mode</a></li>
+    <li><a href="#rMode">Working in Reflection mode</a></li>
+    <li><a href="#socialNorms">Working with Social norms</a></li>
+    <li><a href="#storyEnd">Ending a story</a></li>
+</ol>
+<a href="#references">References</a><br>
+<h2><a name="intro">Introduction to Mexica</a></h2>
+<a href="#references">(For a complete description of Mexica see Pérez y Pérez, 1999)</a>
+<h3><a name="mexica">Mexica</a></h3>
+<p>
+    Mexica is a computer model designed to study the writing process in terms of a creative model: The E-R model.<br/>
+It is designed to generate story plots about the Mexicas (also known as Aztecs). Mexica is a tool where the user can set the value of different parameters
+to constrain the writing process and explore different aspects of the story generation process.
+</p>
+
+<p>
+    In general terms, the program consists of two main routines: the former, based on a set of previous stories defined by the user, creates a group
+of structures representing story schemas; the latter, refers to the previously generated schemas while following a series of E-R cycles 
+to create new stories.
+</p>
+
+<h3><a name="erModel">Engagement-Reflection Creativity Model</a></h3>
+<p>
+    According to Sharples <a href="#references">(see Sharlpes, 1996)</a>, creative writing consists of cycles of engagement and reflection guided by constraints. 
+During engagement, the writer devotes full attention to creating a chain of associated ideas and turning them into text.
+During reflection, the writer reviews the material produced, explores and transforms possible options, produces plans and constraints which will guide further periods of engagement.
+</p>
+
+<h3><a name="engagement">Engagement</a></h3>
+<p>
+    During this stage, constraints guide the production of material.<br/>
+For this purpose a group of filters (routines whose main function is to remove actions from the memory that don't satisfy the requirements imposed during the reflection phase)
+is dynamically managed to guarantee that the possible next actions retrieved from memory will help the story to flow.<br/>
+</p>
+
+<p>
+    While filters manage the possible next actions, the entire engagement cycle works as follows:
+</p>
+<ol>
+    <li>The consequences of an initial event produce an initial context</li>
+    <li>This context is employed to match an atom in memory and retrieve a set of possible next actions associated to it</li>
+    <li>The filters remove from the actions' set those that do not satisfy the guidelines and general constraints</li>
+    <li>The system selects between the remaining actions one as the next event in the story and its posconditions modify the story context</li>
+    <li>The new context is employed to match a new atom in memory and the cycle moves on</li>
+</ol>
+
+<h3><a name="reflection">Reflection</a></h3>
+<p>
+    During this stage, three main activities are performed: reviewing, contemplation and planning. 
+Reviewing consists of reading and interpreting the written material; during contemplation new ideas are formed, and during planning, 
+based on the results obtained, guidelines are created to attend further periods of engagement.<br>
+    Several tasks are considered:
+</p>
+<ol>
+    <li>Evaluation of the material produced during engagement</li>
+    <li>Validation of the coherence of the text produced</li>
+    <li>Break an impasse triggered during the engagement phase</li>
+</ol>
+
+<!-- ------------------------- SYSTEM DESCRIPTION ------------------------------- -->
+<h2><a name="howItWorks">How the system works?</a></h2>
+<h3><a name="actionsList">Summary of available actions</a></h3>
+<ol>
+    <li>Actions menu</li>
+    <ol>
+        <li>Restart story: Removes all the elements in the current story and restarts the story generation process</li>
+        <li>Set default position: Sets a new default position for the story</li>
+        <li>Retrieve story text: Displays the story text in a new window</li>
+    </ol>
+    <li>E-R menu</li>
+    <ol>
+        <li>Automatic engagement: Performs one step of the engagement iteration <a href="#autoEngagement">(see Automatic engagement)</a></li>
+        <li>Manual engagement: Performs a step by step engagement iteration <a href="#manualEngagement">(see Manual engagement)</a></li>
+        <li>Automatic reflection: Performs one step of the reflection iteration <a href="#autoReflection">(see Automatic reflection)</a></li>
+        <li>Manual reflection: Performs a step by step reflection iteration <a href="#manualReflection">(see Manual reflection)</a></li>
+        <li>Automatic E-R cycle: Performs one cycle of engagement and one cycle of reflection including its final analysis phase</li>
+        <li>Create story: Creates a whole story employing the E-R model</li>
+    </ol>
+    <li>Slant menu</li>
+    <ol>
+        <li>Generate output: Generates an XML output of the current story that will be employed as input for the Slant app.</li>
+    </ol>
+</ol>
+
+<h3><a name="newStory">Creating a new story</a></h3>
+<p>
+    The story generation process is divided into the following tasks:
+</p>
+<ol>
+    <li>Definition of the initial parameters</li>
+    <li>Engagement cycle</li>
+    <li>Reflection cycle</li>
+</ol>
+<h3><a name="config">Mexica Parameters</a></h3>
+<p>
+    A set of parameters guide the story generation process. These elements allow the user to establish the conditions under which Mexica will be working.
+    The available values in the system are the following:
+</p>
+<ol>
+    <li><b>Initial action:</b> Provides the story with an initial context to start with. This action is selected from the library of actions defined in the file of actions.</li>
+    <li><b>Default starting location:</b> Is employed to locate a character employed in the story for the first time.</li>
+    <li><b>Starting mode:</b> The E-R cycle can either begin with an Engagement cycle or with a Reflective cycle.</li>
+    <li>
+        <b>Number of actions:</b>
+        <ol>
+            <li><b>Engagement mode:</b> Delimits the maximum number of actions that can be added during an engagement cycle.</li>
+            <li><b>Reflection mode:</b> Delimits the maximum number of actions that can be added during a reflection cycle.</li>
+            <li><b>Story:</b> Delimits the maximum number of actions that can be employed for a story.</li>
+        </ol>
+    </li>
+    <li>
+        <b>Similarity percentage:</b>
+        <ol>
+            <li><b>ACAS percentage:</b> Delimits the minimum similarity percentage required between an atom and a character context 
+                for one of the next actions associated to the atom to be added in the story.</li>
+            <li><b>Social ACAS percentage:</b> Delimits the minimum similarity percentage required between a social atom and a character context
+                to determine that a social exceptional context has been detected.</li>
+        </ol>
+    </li>
+</ol>
+<img src="../images/help/configWindow.png" />
+<h3><a name="mainWindow">Main window elements</a></h3>
+<p>
+    Once the initial parameters have been set for a story, the main window appears. This window comprises three sections:
+</p>
+<ol>
+    <li>Story text (upper left)</li>
+    <li>Story actions (upper right)</li>
+    <li>Characters' context (bottom)</li>
+</ol>
+<img src="../images/help/mainWindow.png" />
+<p>
+    When an action is added to the story (either in reflection or engagement mode), one of its linked texts is displayed in the 'story text' section. 
+    Also, the action instantiated (the action name with the action performer on the left and the action receiver -if exists- on the right) is added to the 'story actions'.
+    Finally, for each of the characters aware of the action, his context is updated with the posconditions of the action. Every character context is displayed on the 'characters' context' section.
+    A character is aware of an action if he shares his location with the action performer.<br>
+    <a name="actionRemoval"></a>
+    (NOTE: By right clicking the mouse over an action in the actions list, it can be removed from the story).
+</p>
+<p>
+    The character context contains the following elements:
+</p>
+<ol>
+    <li>Character name (upper left)</li>
+    <li>Initial and final date (after the character name between parenthesis)</li>
+    <li>Current location (upper right)</li>
+    <li>Known facts (displayed as a list)</li>
+</ol>
+<img src="../images/help/characterContext.png" />
+<p>
+    Every time a character is employed for the first time in a story, a new frame is added to the characters' context section.
+    The initial date of a character corresponds to the action number when the character was first employed and the final date corresponds to the action number when the character dies (if this occurs during the story).
+    The current location of the character is determined according to the following rules:
+</p>    
+<ol>
+    <li>If the action employs one character:</li>
+    <ol>
+        <li>If the character has never been employed in the story, his location is the default location</li>
+    </ol>
+    <li>If the action employs two characters:</li>
+    <ol>
+        <li>If none of the characters has been previously employed in the story, both characters' current location is the default location</li>
+        <li>If one of the characters has been previously used in the story, the new character is located on the same position of the other character.</li>
+        <li>If both characters have been employed previously, their position remains unless the action changes their location</li>
+    </ol>
+</ol>
+<p>
+    The known facts displayed in the character context frame are updated every time the character is aware of an action.
+    A character is aware of an action if he shares his location with the action performer.
+    Two different types of facts are displayed in a context:
+</p>
+<ol>
+    <li>Emotions between characters</li>
+    <ol>
+        <li>
+            Type 1 (Friendship): Represents a friendship relation between two characters.<br> 
+            It has the form: &lt;performer&gt; friendship(intensity) &lt;receiver&gt;<br>
+        </li>
+        <li>
+            Type 2 (Love): Represent a love relation between two characters.<br>
+            It has the form: &lt;performer&gt; love(intensity) &lt;receiver&gt;<br>
+        </li>
+    </ol>
+    <li>
+        Tensions between characters<br>
+        It has the form: &lt;receiver&gt; &lt;tension name&gt; by &lt;performer&gt;
+    </li>
+</ol>
+<h3><a name="eMode">Working in Engagement mode</a></h3>
+<p>
+    When Mexica is running under this mode, the following tasks are performed every step of the cycle:
+</p>
+<ol>
+    <li>The character contexts are employed to match an atom in memory and retrieve a set of possible next actions associated to it</li>
+    <li>The filters remove from the next actions' set those that do not satisfy the guidelines and general constraints</li>
+    <li>The system selects between the remaining actions one as the next event in the story and its posconditions modify each of the character contexts</li>
+</ol>
+<p>
+    In this application, there are two possible ways to perform an engagement step.<br>
+    The first option consists in automatically running an engagement step. This option is available in the 'E-R' menu, with the 'Automatic engagement' option (shortcut &lt;ctrl&gt;+'E').<br>
+    The second option consists in manually running an engagement step. This option is available in the 'E-R' menu, with the 'Manual engagement' option.
+</p>
+<h4><a name="autoEngagement">Automatic engagement</a></h4>
+<p>
+    When the automatic engagement action is performed, the system automatically retrieves all the atoms matching each of the characters' contexts available in the story.
+    Then, depending on the available constraints, the actions associated to each of the atoms obtained are filtered. Finally, one of the actions is selected and instantiated.
+    An action is instantiated by choosing a set of characters for it.
+</p>
+<p>
+    There are two types of constraints employed to determine which actions can be added to the current story. 
+    The first are called filters and are always active. The second are called guidelines and are managed in the reflection phase.
+    The filters are implemented as routines in the system performing the following tasks:
+</p>
+<ol>
+    <li>Check that an action lets the story flow: The story flows when an action adds or removes a new fact from a character context.</li>
+    <li>Remove no representative contexts: A context is called representative if it has at least half of the elements of the context with the most facts.</li>
+    <li>Remove illogical actions: If a character A has strong emotional links towards a character B and an action adds strong opposite emotional link from B to A, that action is considered illogical.</li>
+</ol>
+<p>
+    The guidelines available in the system are explained in detail in the reflection section <a href="#guidelines">(see guidelines)</a>.
+</p>
+<h4><a name="manualEngagement">Manual engagement</a></h4>
+<p>
+    The process begins by selecting the character context that will be employed to compare against the available atoms in the system.
+</p>
+<img src="../images/help/contextSelection.png" />
+<p>
+    Once a context is selected, a new window is opened displaying all the atoms with similarity percentage greater or equal than the ACAS percentage.<br>
+    This window displays the following elements:
+</p>
+<ol>
+    <li>Cells (upper left)</li>
+    <li>Atoms found on each cell (upper middle left)</li>
+    <li>Atom Context (upper middle right)</li>
+    <li>Selected character's context (upper right)</li>
+    <li>Next actions associated to the selected atom (bottom middle)</li>
+</ol>
+<img src="../images/help/engagementWindow.png" />
+<p>
+    An atom represents a character context previously generated in one of the stories made by a human author.
+    These atoms are organized in groups, called cells, according to its number of tensions and emotions.
+    Every atom comprises a context and a list of next actions. The context is formed from the context of the character that performed an action.
+    Once this context is selected, the characters are replaced with variables to generalize it. 
+    Finally, the next action employed is added to the list of next actions associated to the atom.
+</p>
+<p>
+    Context in this section are represented as digraphs. Nodes represent characters (or variables representing characters) and edges represent emotions or tensions.
+    An emotion is represented with a black edge from the emotion performer to the receiver. Its label comprises the emotion type (type 1 or type 2) and the intensity (a value from -3 to 3).
+    A tension is represented with a dotted blue edge from the tension performer to the receiver. Its label displays the tension type.<br>
+    The <a name="tensions">available tension types</a> are the following:
+</p>
+<ul>
+    <li>Hr: Health at risk</li>
+    <li>Lr: Life at risk</li>
+    <li>Pr: Prisoner</li>
+    <li>Ad: Actor dead</li>
+    <li>Pd: Potential danger</li>
+    <li>Ce: Clashing emotions</li>
+    <li>Lc: Love competition</li>
+    <li>So: Social order at risk (If running with the social analysis active)</li>
+</ul>
+
+<h3><a name="rMode">Working in Reflection mode</a></h3>
+<p>
+    When Mexica is running under this mode, the following tasks can be performed in a step of a reflection cycle:
+</p>
+<ol>
+    <li>Validation of the coherence of the text produced</li>
+    <li>Evaluation of the material produced during engagement</li>
+    <li>Break an impasse triggered during the engagement phase</li>
+</ol>    
+<p>
+    During engagement, the preconditions of an action added to the story are not revised. 
+    Nevertheless, the system keeps track of them on a list with all the missing conditions, and they are validated during this phase.
+    If the system detects that there are missing conditions in a story when the reflection phase is reached, 
+    for each one of them the system instantiates an action to fulfill it. Then, the selected action is added before the action that triggered the missing condition.
+</p>
+<a name="guidelines"></a>
+<p>
+    Once the story runs out of missing conditions, a partial story evaluation is performed.
+    This evaluation activates or deactivates guidelines with the purpose of incrementing or decrementing the tension in the story
+    (for a complete explanation of this topic see <a href="#references">Pérez y Pérez 1999</a>).
+</p>
+<p>
+    When an impasse is reached during the engagement phase (i.e. there are no atoms matching any of the character contexts available), 
+    the system tries to break it reproducing the way actions have been employed in previous stories.
+    The process to break an impasse consists in:
+</p>
+<ol>
+    <li>Obtain all the actions in the previous stories that followed the action that triggered the impasse</li>
+    <li>Select an action that fulfills the active constraints in the story</li>
+    <li>Add the selected action to the story</li>
+</ol>
+<p>
+    If an impasse cannot be broken, reflection triggers a guideline suggesting the story to end.
+</p>
+<p>
+    In this application, there are two possible ways to perform a reflection step.<br>
+    The first option consists in automatically running a reflection step. This option is available in the 'E-R' menu, with the 'Automatic reflection' option (shortcut &lt;ctrl&gt;+'R').<br>
+    The second option consists in manually running a reflection step. This option is available in the 'E-R' menu, with the 'Manual reflection' option.
+</p>
+
+<h4><a name="autoReflection">Automatic reflection</a></h4>
+<p>
+    When the system works in automatic reflection mode, one of the missing conditions in the story is depicted.
+    Then, a set of actions containing this missing condition as a poscondition is obtained. 
+    Finally, one of the actions is selected and added to the story before the action that triggered the missing condition.
+</p>
+<h4><a name="manualReflection">Manual reflection</a></h4>
+<p>
+    When the system works in manual reflection mode, a new window is displayed presenting the following elements:
+</p>
+<ol>
+    <li>List of missing conditions (upper left)</li>
+    <li>Tension graphs for each character (bottom): These are informative graphs to show how the tension progressed during the story for each character.</li>
+</ol>
+<img src="../images/help/reflectionWindow.png" />
+<p>
+    The user can manually fulfill a missing condition from the list by selecting it and clicking the 'Pick an action' button.
+    This will display a window with the following elements:
+</p>
+<ol>
+    <li>Action filters (left)</li>
+    <li>List of actions (left)</li>
+    <li>Action preconditions (top middle)</li>
+    <li>Action posconditions (bottom middle)</li>
+    <li>Available performer characters (top right)</li>
+    <li>Available receiver characters (bottom right)</li>
+</ol>
+<img src="../images/help/actionSelectionWindow.png" />
+<p>
+    In this window the user can select an action, his performer and receiver characters (if necessary) 
+    to fulfill with the selected missing condition and add it to the story. 
+</p>
+<h3><a name="socialNorms">Working with social norms</a></h3>
+<p>
+    The system has the capability to detect when a character breaks a social norm inside the story.
+    There are three different mechanisms to work with social norms:
+</p>
+<ol>
+    <li>General principle of social norms</li>
+    <li>Exceptions to the general principle</li>
+    <li>Special contexts retrieved from previous stories</li>
+</ol>
+<p>
+    The general principle of social norms states that "if a character performs an action that threatens the 
+    wellbeing of a social group, he breaks a social norm".<br>
+    In the system, the wellbeing of a social group is threatened if a social tension is triggered in the story with no justification.
+    The social tensions are those tensions that can produce a social impact. The list comprises Lr, Hr, Pr and Ad (see <a href="#tensions">tension description here</a>).
+    A tension is justified if one of the following scenarios is identified:
+</p>
+<ol>
+    <li>Given the action 'A actionName B' which triggers a tension T from A to B:</li>
+    <ol>
+        <li>The action is justified for the character C if his context contains a tension T (or justifiable) from B to A or from B to one of the A-linked characters.</li>
+        Character C is linked to character D if exists a positive emotional link from C to D.<br>
+        Hr, Lr, Pr are justifiable between them. Ad is justifiable by Hr, Lr or Pr.
+        <li>The action is justified, if the tension deactivates another tension</li>
+        <li>The action is justified, if the tension was generated by the same character who receives it</li>
+    </ol>
+</ol>
+<p>
+    Exceptions to the general principle are cases when the general principle detects a social norm breakage, 
+    but the context where the action occurs justifies the action. These contexts are obtained from the previous stories.
+    The special marker 'SE-id', located at the end of an action, determines that such action is justified in the story context.
+    This context is stored in a repository of social contexts. 
+    Then, when a character context from a story is similar (with a similarity value greater or equal to the social ACAS parameter) to one of the stored social contexts, 
+    the action is justified.
+</p>
+<p>
+    Special contexts retrieved from previous stories represent cases when a social norm is broken and the general principle didn't detect it.
+    The special marker 'SN-id', located at the end of an action, determines that such action breaks a social norm in the story context.
+    This context is stored in a repository of social contexts. 
+    Then, when a character context from a story is similar (with a similarity value greater or equal to the social ACAS parameter) to one of the stored social contexts, 
+    the action breaks a social norm.
+</p>
+<p>
+    When a character breaks a social norm, a special tension is triggered: Social Order at Risk (So). This tension is added to each context belonging to a character that is aware of the action.
+    Also, the action that triggered a So tension is marked with one of the following labels in the 'actions list':
+</p>
+<ol>
+    <li>EGP (Exception to general principle): An action is justified by a special social context</li>
+    <li>SSE (Special social norm exception): An action breaks a social norm by a special social context</li>
+    <li>BSN (Breaks social norm general principle): An action breaks a social norm by the general principle</li>
+    <li>JA (Justified action): A action is justified by one of the previously defined scenarios</li>
+</ol>
+<h3><a name="storyEnd">Ending a story</a></h3>
+<p>
+    As part of the evaluation performed at the end of the reflection cycle, the system checks if any of the following constraints is satisfied for the story to finish.
+</p>
+<ol>
+    <li>If all the characters in the story are dead</li>
+    <li>If an unbreakable impasse is reached</li>
+    <li>If the maximum number of actions for a story is reached</li>
+</ol>
+<h3><a name="references">References</a></h3>
+<a href="http://www.rafaelperezyperez.com/documents/MEXICA_DPhil_RPyP.pdf">
+    Pérez y Pérez, R. (1999). 
+</a>
+MEXICA: A Computer Model of Creativity in Writing. 
+DPhil Dissertation, University of Sussex, UK<br>
+<a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&cad=rja&ved=0CGAQFjAF&url=ftp%3A%2F%2Fs208.math.msu.su%2F557000%2F29191fad7c0225094b44fbb44882228f&ei=-NcGUrjdHYjq2QXsiYHQAg&usg=AFQjCNHGa2T00qT5YUyEQPL9cF7l8drI5g&sig2=tGYiXisaBwkOFEVQrfIjTw&bvm=bv.50500085,d.b2I">
+    Sharples M. (1996).
+</a>
+An account of writing as creative design.
+C.M. Levy &amp; Ransdell.<br>
+    </body>
+</html>

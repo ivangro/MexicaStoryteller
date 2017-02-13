@@ -1,0 +1,901 @@
+*Tension:0 EmoLin:1
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->0 Type2->1 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+			Tension=>
+			NexAct=> C Was_in_love_with B
+			NexAct=> B Was_in_love_with C
+			NexAct=> A Went_Tlatelolco_Market 
+			NexAct=> B Was_attracted_to C
+			NexAct=> A Realised 
+			NexAct=> A Went_Tlatelolco_Market 
+			NexAct=> B Was_attracted_to C
+			NexAct=> A Realised 
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->1 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-2,1):B
+			Tension=>
+			NexAct=> A Exiled B
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->1 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+			Tension=>
+			NexAct=> A Went_Palace 
+			NexAct=> C Mugged B
+			NexAct=> A Went_Hunting_with B
+			NexAct=> A Had_an_accident 
+			NexAct=> A Rewarded B
+*Tension:1 EmoLin:3
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->1
+		FeaEmoLin=> Type1->0 Type2->3 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				C(3,2):B
+				B(3,2):D
+			Tension=>
+				Lc(A):C
+			NexAct=> A Got_intensely_Jealous_of D
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->1 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->3 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				B(-3,1):C
+				A(-3,1):C
+			Tension=>
+				Pd(C):B
+			NexAct=> A Looked_For_And_Found C
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->1 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->1 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(2,2):C
+				A(-3,1):C
+			Tension=>
+				Pd(C):A
+			NexAct=> A Attacked C
+*Tension:2 EmoLin:4
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->1 Pr->0 Ce->0 Lc->1
+		FeaEmoLin=> Type1->1 Type2->3 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				C(3,2):B
+				B(3,2):D
+				A(-3,1):D
+			Tension=>
+				Lc(A):C
+				Pd(D):A
+			NexAct=> A Killed D
+	**Atom 
+		FeaTen=> AD->1 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->1
+		FeaEmoLin=> Type1->1 Type2->3 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				C(3,2):B
+				B(3,2):D
+				A(-3,1):D
+			Tension=>
+				Lc(A):C
+				Ad(D):A
+			NexAct=> B Attacked A
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->1 Pr->0 Ce->1 Lc->0
+		FeaEmoLin=> Type1->4 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				A(-3,1):B
+				A(3,1):C
+				C(3,1):A
+			Tension=>
+				Ce(A):B
+				Pd(B):A
+			NexAct=> A Exiled B
+	**Atom 
+		FeaTen=> AD->0 Lr->1 Hr->0 Pd->1 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(2,2):C
+				A(-2,1):C
+				C(-3,1):A
+			Tension=>
+				Lr(C):A
+				Pd(A):C
+			NexAct=> C Fought A
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->0 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->4 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):C
+				C(-3,1):B
+				C(-3,1):A
+			Tension=>
+				Pr(A):B
+				Hr(C):B
+			NexAct=> C died_by_injuries 
+*Tension:6 EmoLin:6
+	**Atom 
+		FeaTen=> AD->1 Lr->1 Hr->0 Pd->2 Pr->0 Ce->1 Lc->1
+		FeaEmoLin=> Type1->3 Type2->3 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				C(3,2):B
+				B(3,2):D
+				A(-3,1):D
+				B(-3,1):A
+				A(-3,1):B
+			Tension=>
+				Lc(A):C
+				Ad(D):A
+				Pd(A):B
+				Lr(A):B
+				Pd(B):A
+				Ce(A):B
+			NexAct=> A Wounded B
+*Tension:7 EmoLin:6
+	**Atom 
+		FeaTen=> AD->1 Lr->1 Hr->1 Pd->2 Pr->0 Ce->1 Lc->1
+		FeaEmoLin=> Type1->3 Type2->3 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				C(3,2):B
+				B(3,2):D
+				A(-3,1):D
+				A(-3,1):B
+				B(-3,1):A
+			Tension=>
+				Lc(A):C
+				Ad(D):A
+				Lr(A):B
+				Pd(B):A
+				Ce(A):B
+				Hr(B):A
+				Pd(A):B
+			NexAct=> C Attacked A
+*Tension:8 EmoLin:7
+	**Atom 
+		FeaTen=> AD->1 Lr->2 Hr->1 Pd->4 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->4 Type2->2 Type3->0 Type4->1
+			EmoLin=>
+				A(3,2):B
+				B(3,2):C
+				D(-3,1):C
+				D(-3,1):B
+				B(-3,1):D
+				A(-3,4):D
+				D(-3,1):A
+			Tension=>
+				Ad(C):D
+				Lr(D):B
+				Pd(B):D
+				Hr(B):D
+				Pd(D):B
+				Pd(D):A
+				Lr(D):A
+				Pd(A):D
+			NexAct=> A Fought D
+*Tension:9 EmoLin:7
+	**Atom 
+		FeaTen=> AD->1 Lr->3 Hr->1 Pd->4 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->5 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):C
+				D(-3,1):C
+				D(-3,1):B
+				B(-3,1):D
+				D(-3,1):A
+				A(-3,1):D
+			Tension=>
+				Ad(C):D
+				Lr(D):B
+				Pd(B):D
+				Hr(B):D
+				Pd(D):B
+				Pd(D):A
+				Lr(D):A
+				Pd(A):D
+				Lr(A):D
+			NexAct=> A Killed D
+*Tension:3 EmoLin:4
+	**Atom 
+		FeaTen=> AD->2 Lr->0 Hr->1 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):C
+				B(-3,1):D
+				A(-3,1):D
+			Tension=>
+				Ad(C):D
+				Hr(B):D
+				Ad(D):A
+			NexAct=> A Cured B
+	**Atom 
+		FeaTen=> AD->0 Lr->1 Hr->0 Pd->2 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(2,2):C
+				A(-3,1):C
+				C(-3,1):A
+			Tension=>
+				Pd(C):A
+				Lr(C):A
+				Pd(A):C
+			NexAct=> A Wounded C
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->1 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->4 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):C
+				C(-3,1):B
+				C(-3,1):A
+			Tension=>
+				Pr(A):B
+				Hr(C):B
+				Pd(A):C
+			NexAct=> A Went_Tenochtitlan_City 
+*Tension:2 EmoLin:5
+	**Atom 
+		FeaTen=> AD->2 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->3 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):C
+				B(-3,1):D
+				A(-3,1):D
+				B(3,1):A
+			Tension=>
+				Ad(C):D
+				Ad(D):A
+			NexAct=> A Exiled A
+*Tension:0 EmoLin:2
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-2,1):B
+				B(-3,1):A
+			Tension=>
+			NexAct=> B Went_Texcoco_Lake 
+			NexAct=> B Wounded A
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->0 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+			Tension=>
+			NexAct=> A Loved C
+			NexAct=> A Loved C
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				C(3,1):B
+			Tension=>
+			NexAct=> D Kidnapped B
+			NexAct=> D Kidnapped B
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->0 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(2,2):C
+			Tension=>
+			NexAct=> B Went_Texcoco_Lake_with C
+			NexAct=> A Followed B
+			NexAct=> A Got_intensely_Jealous_of C
+			NexAct=> B Went_Texcoco_Lake_with C
+			NexAct=> A Followed B
+			NexAct=> A Got_Jealous_Of C
+*Tension:3 EmoLin:2
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->2 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):A
+			Tension=>
+				Hr(B):A
+				Pd(B):A
+				Pd(A):B
+			NexAct=> C Realised 
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->2 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):A
+			Tension=>
+				Pr(A):B
+				Pd(B):A
+				Pd(A):B
+			NexAct=> B Attacked A
+	**Atom 
+		FeaTen=> AD->1 Lr->0 Hr->0 Pd->1 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				C(-3,1):D
+			Tension=>
+				Pr(C):D
+				Pd(D):C
+				Ad(B):A
+			NexAct=> A Commited_Suicide 
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->1 Pr->0 Ce->1 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				A(-3,1):B
+			Tension=>
+				Hr(A):C
+				Pd(B):A
+				Ce(A):B
+			NexAct=> B Went_Tenochtitlan_City 
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->2 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):C
+			Tension=>
+				Pr(A):B
+				Pd(B):A
+				Pd(C):B
+			NexAct=> B Attacked C
+*Tension:2 EmoLin:1
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->1 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->1 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+			Tension=>
+				Hr(A):B
+				Pd(B):A
+			NexAct=> C Cured A
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->1 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->1 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+			Tension=>
+				Pr(A):B
+				Pd(B):A
+			NexAct=> B Got_intensely_Jealous_of A
+			NexAct=> C Realised 
+			NexAct=> C Found_by_accident B
+			NexAct=> B felt_Threatened_by C
+			NexAct=> C Realised 
+*Tension:1 EmoLin:2
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->1 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				A(3,1):C
+			Tension=>
+				Pd(B):A
+			NexAct=> D Kidnapped C
+*Tension:4 EmoLin:2
+	**Atom 
+		FeaTen=> AD->0 Lr->1 Hr->0 Pd->2 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				B(-3,1):A
+				A(-3,1):B
+			Tension=>
+				Pr(A):B
+				Pd(B):A
+				Pd(A):B
+				Lr(A):B
+			NexAct=> C Looked_For_And_Found B
+*Tension:3 EmoLin:5
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->2 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->5 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):A
+				B(3,1):C
+				C(-3,1):D
+				B(-3,1):D
+			Tension=>
+				Pr(C):D
+				Pd(D):C
+				Pd(D):B
+			NexAct=> B Had_an_accident 
+*Tension:4 EmoLin:5
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->2 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->5 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):A
+				B(3,1):C
+				C(-3,1):D
+				B(-3,1):D
+			Tension=>
+				Pr(C):D
+				Pd(D):C
+				Pd(D):B
+				Hr(B):E
+			NexAct=> D prepared_to_Sacrifice B
+*Tension:8 EmoLin:3
+	**Atom 
+		FeaTen=> AD->0 Lr->2 Hr->1 Pd->3 Pr->2 Ce->0 Lc->0
+		FeaEmoLin=> Type1->3 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				B(-3,1):A
+				A(-3,1):B
+				C(-3,1):B
+			Tension=>
+				Pr(A):B
+				Pd(B):A
+				Pd(A):B
+				Lr(A):B
+				Hr(C):D
+				Pr(C):B
+				Lr(C):B
+				Pd(B):C
+			NexAct=> E Found_by_accident C
+*Tension:4 EmoLin:4
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->3 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->4 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):A
+				B(3,1):C
+				C(-3,1):D
+			Tension=>
+				Pr(C):D
+				Pd(D):C
+				Pd(B):A
+				Pd(A):B
+			NexAct=> A Killed B
+	**Atom 
+		FeaTen=> AD->3 Lr->0 Hr->0 Pd->0 Pr->0 Ce->1 Lc->0
+		FeaEmoLin=> Type1->3 Type2->1 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				A(-3,1):C
+				A(3,2):D
+				A(-3,1):B
+			Tension=>
+				Ad(C):A
+				Ad(D):B
+				Ce(A):B
+				Ad(B):A
+			NexAct=> A Killed A
+			NexAct=> A Killed A
+	**Atom 
+		FeaTen=> AD->0 Lr->1 Hr->1 Pd->2 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(2,2):C
+				A(-3,1):C
+				C(-3,1):A
+			Tension=>
+				Pd(C):A
+				Lr(C):A
+				Pd(A):C
+				Hr(C):A
+			NexAct=> B Cured C
+*Tension:1 EmoLin:0
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->0 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+			Tension=>
+				Hr(A):B
+			NexAct=> C Found_by_accident A
+			NexAct=> C Cured A
+			NexAct=> C Cured A
+*Tension:1 EmoLin:1
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->1 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->1 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+			Tension=>
+				Pd(B):A
+			NexAct=> C Realised 
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->1 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+			Tension=>
+				Hr(A):C
+			NexAct=> B Did_not_cure A
+*Tension:2 EmoLin:3
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->2 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->3 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				B(-3,1):C
+				A(-3,1):C
+			Tension=>
+				Pd(C):B
+				Pd(C):A
+			NexAct=> A Made_Prisioner C
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->0 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->3 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):C
+				C(-3,1):B
+			Tension=>
+				Pr(A):B
+				Hr(C):B
+			NexAct=> A Did_not_cure C
+*Tension:0 EmoLin:3
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->1 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+				A(3,1):C
+			Tension=>
+			NexAct=> B Loved C
+			NexAct=> B Loved C
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->1 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(2,2):C
+				A(-2,1):C
+			Tension=>
+			NexAct=> A Attacked C
+*Tension:0 EmoLin:4
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+				A(3,1):C
+				B(3,1):C
+			Tension=>
+			NexAct=> C Went_Popocatepetl_Volcano 
+			NexAct=> C Went_Popocatepetl_Volcano 
+*Tension:2 EmoLin:6
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->1 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->4 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+				A(3,1):C
+				B(3,1):C
+				C(-3,1):D
+				A(-3,1):D
+			Tension=>
+				Pr(C):D
+				Pd(D):C
+			NexAct=> A Looked_For_And_Found D
+			NexAct=> A Looked_For_And_Found D
+	**Atom 
+		FeaTen=> AD->1 Lr->0 Hr->0 Pd->0 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->4 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+				A(3,1):C
+				B(3,1):C
+				C(-3,1):D
+				A(-3,1):D
+			Tension=>
+				Pr(C):D
+				Ad(D):A
+			NexAct=> A Rescued C
+			NexAct=> A Rescued C
+*Tension:3 EmoLin:6
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->2 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->4 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+				A(3,1):C
+				B(3,1):C
+				C(-3,1):D
+				A(-3,1):D
+			Tension=>
+				Pr(C):D
+				Pd(D):C
+				Pd(D):A
+			NexAct=> A Attacked D
+			NexAct=> A Attacked D
+*Tension:5 EmoLin:7
+	**Atom 
+		FeaTen=> AD->0 Lr->1 Hr->0 Pd->3 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->5 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+				A(3,1):C
+				B(3,1):C
+				C(-3,1):D
+				A(-3,1):D
+				D(-3,1):A
+			Tension=>
+				Pr(C):D
+				Pd(D):C
+				Pd(D):A
+				Lr(D):A
+				Pd(A):D
+			NexAct=> A Fought D
+			NexAct=> A Fought D
+*Tension:6 EmoLin:7
+	**Atom 
+		FeaTen=> AD->0 Lr->2 Hr->0 Pd->3 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->5 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+				A(3,1):C
+				B(3,1):C
+				C(-3,1):D
+				D(-3,1):A
+				A(-3,1):D
+			Tension=>
+				Pr(C):D
+				Pd(D):C
+				Pd(D):A
+				Lr(D):A
+				Pd(A):D
+				Lr(A):D
+			NexAct=> A Killed D
+			NexAct=> A Killed D
+*Tension:1 EmoLin:7
+	**Atom 
+		FeaTen=> AD->1 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->5 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+				A(3,1):C
+				B(3,1):C
+				C(-3,1):D
+				A(-3,1):D
+				C(3,1):A
+			Tension=>
+				Ad(D):A
+			NexAct=> C Fell_in_love A
+			NexAct=> C Fell_in_love A
+*Tension:1 EmoLin:6
+	**Atom 
+		FeaTen=> AD->1 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->5 Type2->1 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				C(3,1):B
+				B(-3,1):D
+				A(-3,1):D
+				B(3,1):A
+				B(3,2):A
+			Tension=>
+				Ad(D):A
+			NexAct=> B Realised 
+			NexAct=> B Realised 
+*Tension:2 EmoLin:8
+	**Atom 
+		FeaTen=> AD->1 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->1
+		FeaEmoLin=> Type1->5 Type2->3 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				C(3,1):B
+				B(-3,1):D
+				A(-3,1):D
+				B(3,1):A
+				B(3,2):A
+				A(3,2):C
+				C(3,2):A
+			Tension=>
+				Ad(D):A
+				Lc(B):C
+			NexAct=> B Hated C
+			NexAct=> B Hated C
+*Tension:3 EmoLin:9
+	**Atom 
+		FeaTen=> AD->1 Lr->0 Hr->0 Pd->1 Pr->0 Ce->0 Lc->1
+		FeaEmoLin=> Type1->6 Type2->3 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				C(3,1):B
+				B(-3,1):D
+				A(-3,1):D
+				B(3,1):A
+				B(3,2):A
+				A(3,2):C
+				C(3,2):A
+				B(-3,1):C
+			Tension=>
+				Ad(D):A
+				Lc(B):C
+				Pd(C):B
+			NexAct=> B Looked_For_And_Found C
+			NexAct=> B Looked_For_And_Found C
+*Tension:2 EmoLin:7
+	**Atom 
+		FeaTen=> AD->2 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->5 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				B(-3,1):C
+				A(-3,1):C
+				B(3,1):A
+				B(3,2):A
+				A(3,2):D
+				B(-3,1):D
+			Tension=>
+				Ad(C):A
+				Ad(D):B
+			NexAct=> A Realised 
+			NexAct=> A Realised 
+*Tension:6 EmoLin:10
+	**Atom 
+		FeaTen=> AD->2 Lr->0 Hr->0 Pd->0 Pr->0 Ce->2 Lc->2
+		FeaEmoLin=> Type1->7 Type2->3 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				C(3,1):B
+				B(-3,1):D
+				A(-3,1):D
+				B(3,1):A
+				B(3,2):A
+				A(3,2):C
+				C(3,2):A
+				C(-3,1):B
+				A(-3,1):B
+			Tension=>
+				Ad(D):A
+				Lc(C):B
+				Lc(B):C
+				Ad(C):B
+				Ce(A):B
+				Ce(C):B
+			NexAct=> A Followed B
+			NexAct=> A Looked_For_And_Found B
+*Tension:4 EmoLin:7
+	**Atom 
+		FeaTen=> AD->2 Lr->0 Hr->0 Pd->1 Pr->0 Ce->1 Lc->0
+		FeaEmoLin=> Type1->5 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				B(-3,1):C
+				A(-3,1):C
+				B(3,1):A
+				B(3,2):A
+				A(3,2):D
+				A(-3,1):B
+			Tension=>
+				Ad(C):A
+				Ad(D):B
+				Ce(A):B
+				Pd(B):A
+			NexAct=> A Killed B
+			NexAct=> A Killed B
+*Tension:2 EmoLin:2
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->0 Pr->0 Ce->1 Lc->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				A(-3,1):B
+			Tension=>
+				Hr(A):C
+				Ce(A):B
+			NexAct=> D Found_by_accident A
+*Tension:1 EmoLin:4
+	**Atom 
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->1 Lc->0
+		FeaEmoLin=> Type1->4 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(3,1):B
+				A(-3,1):B
+				A(3,1):C
+				C(3,1):A
+			Tension=>
+				Ce(A):B
+			NexAct=> A Looked_For_And_Found B
+*Tension:4 EmoLin:6
+	**Atom 
+		FeaTen=> AD->0 Lr->1 Hr->0 Pd->3 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->3 Type2->2 Type3->0 Type4->1
+			EmoLin=>
+				A(3,2):B
+				B(2,2):C
+				A(-3,1):C
+				C(-3,1):A
+				B(-3,4):A
+				C(3,1):B
+			Tension=>
+				Pd(C):A
+				Lr(C):A
+				Pd(A):C
+				Pd(A):B
+			NexAct=> A Exiled A
+*Tension:4 EmoLin:3
+	**Atom 
+		FeaTen=> AD->0 Lr->2 Hr->0 Pd->2 Pr->0 Ce->0 Lc->0
+		FeaEmoLin=> Type1->2 Type2->1 Type3->0 Type4->0
+			EmoLin=>
+				A(2,2):B
+				C(-3,1):B
+				B(-3,1):C
+			Tension=>
+				Lr(B):C
+				Pd(C):B
+				Lr(C):B
+				Pd(B):C
+			NexAct=> B Killed C
+*Tension:5 EmoLin:3
+	**Atom 
+		FeaTen=> AD->0 Lr->1 Hr->0 Pd->3 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->3 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):C
+				C(-3,1):B
+			Tension=>
+				Pr(A):B
+				Pd(B):A
+				Pd(C):B
+				Lr(C):B
+				Pd(B):C
+			NexAct=> C Fought B
+*Tension:6 EmoLin:3
+	**Atom 
+		FeaTen=> AD->0 Lr->2 Hr->0 Pd->3 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->3 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):C
+				C(-3,1):B
+			Tension=>
+				Pr(A):B
+				Pd(B):A
+				Pd(C):B
+				Lr(C):B
+				Pd(B):C
+				Lr(B):C
+			NexAct=> B Wounded C
+*Tension:7 EmoLin:3
+	**Atom 
+		FeaTen=> AD->0 Lr->2 Hr->1 Pd->3 Pr->1 Ce->0 Lc->0
+		FeaEmoLin=> Type1->3 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):B
+				B(-3,1):C
+				C(-3,1):B
+			Tension=>
+				Pr(A):B
+				Pd(B):A
+				Pd(C):B
+				Lr(C):B
+				Pd(B):C
+				Lr(B):C
+				Hr(C):B
+			NexAct=> B ran_away 

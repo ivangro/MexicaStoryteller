@@ -1,0 +1,10 @@
+Gender_Hierarchy
+Male 2 (Tlatoani Priest Prince Eagle_Knight Jaguar_Knight Farmer Fisherman Artist Hunter Enemy Slave Trader Warrior)
+Female 1 (Princess Lady Virgin)
+Social_Class_Hierarchy
+Nobility 5 (Tlatoani Priest)
+High_Society 4 (Prince Princess)
+Fighters 3 (Eagle_Knight Jaguar_Knight)
+Workers 2 (Farmer Fisherman Artist Lady Virgin Hunter Trader)
+Low_Society 1 (Enemy Slave Warrior)
+END

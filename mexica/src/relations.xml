@@ -1,0 +1,13 @@
+<relations>
+	<emotions>
+		<emotion name="Love" value="1" text="1" textualRepresentation="Friendship" />
+		<emotion name="InLove" value="2" text="2" textualRepresentation="Love" inLove="true" />
+		<emotion name="Other" value="3" text="*" textualRepresentation="Other" />
+		<emotion name="Any" value="4" text="4" textualRepresentation="Any emotion" any="true" />
+		<emotion name="Social" value="5" text="5" textualRepresentation="Social" social="true" />
+		<!-- emotion name="" value="" text="" textualRepresentation="" / -->
+	</emotions>
+	<tensions>
+		<tension name="" abbreviation="" />
+	</tensions>
+</relations>

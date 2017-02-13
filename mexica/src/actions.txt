@@ -1,0 +1,880 @@
+ACT
+Admired_and_respected 2
+POS
+E a b +2 1
+TEXT
+@A respected and admired @B because of @B's heroic and intrepid behaviour during the last flowery-war.
+
+ACT
+Admired_heroic_behavior 2
+POS
+E a b +3 1
+TEXT
+@A admired @B because of @B's heroic and intrepid behaviour.
+
+ACT
+Affronted 2
+PRE
+E a b -2 4
+POS
+E b a -2 1
+E Lb a % 1
+TEXT
+@A was really angry for what had happened and affronted @B.
+
+ACT
+Apologized 2
+PRE
+E b a -2 4
+POS
+E b a +2 1
+TEXT
+@A was really upsed for the last events and decided to beseech for @B's forgiveness.
+
+ACT
+Attacked 2
+PRE
+E a b -2 4
+POS
+E b a -3 1
+E Lb a % 1
+E b a -2 4
+TEN
+T Lr b a +
+TEXT
+@A thoroughly observed @B. Then, @A took a dagger, jumped towards @B and attacked @B.
+@A's frame of mind was very volatile and without thinking about it @A charged against @B.
+
+ACT
+Attempted_to_steal 2
+PRE
+E b a +1 4
+POS
+E b a -2 1
+TEXT
+@A bumped into @B while two drunk hunters were fighting. Taking advantage of the confusion, @A attempted to steal @B's goat-skin. @B realised of this situation and got furious.
+
+ACT
+became_free 1
+PRE
+T Pr a *
+TEN
+T Pf a
+TEXT
+With a hidden knife @A was able to cut all the ropes and escape.
+
+ACT
+Commited_Suicide 1
+TEN
+T Ad a
+TEXT
+@A got that depress that committed suicide.
+
+ACT
+Confronted 2
+POS
+E a b -2 1
+E b a -2 1
+E Lb a % 1
+TEXT
+@A was not pleased with @B's recent behavior and demanded @B to stop.
+
+ACT
+Cured 2
+PRE
+T Hr b *
+POS
+E b a +3 1
+E Lb a % 1
+TEN
+T Hn b a
+TEXT
+@A went in search of some medical plants and cured @B. As a result @B was very grateful to @A.
+@A had heard that the Tepescohuitle was an effective curative plant. So, @A prepared a plasma and applied it to @B's wounds. It worked and @B started to recuperate! @B realised that @A's determination had saved @B's life.
+
+ACT
+Demanded 2
+POS
+E a b -3 1
+E b a -2 1
+TEN
+T Lr b a
+TEXT
+@A realised that @B's actions originated several problems in the comunity. Thus, @A wanted to stop @B
+
+ACT
+Did_not_accept_reward 2
+PRE
+E a b +2 1
+E b a +2 1
+POS
+E b a -3 1
+TEXT
+Even though @A was pleased with @B's offering. A bad spirit took @A's soul and he denied it. Now @B is really upset.
+
+ACT
+Did_not_cure 2
+PRE
+T Hr b *
+POS
+E b a -3 1
+E Lb a % 1
+TEXT
+@A, knowing that @B's life was at risk, did not to cure @B. In this way, @A expected @B's dead.
+
+ACT
+Did_Not_Know_to_cure 2
+PRE
+T Hr b *
+POS
+E b a +2 1
+TEXT
+@A tried to cure @B, but @A did not know how to use the curative plants.
+
+ACT
+Did_not_love 2
+PRE
+E b a +3 2
+POS
+E b a -2 1
+TEXT
+PENDING TEXT
+
+ACT
+Did_not_Save 2
+PRE
+T Lr b *
+POS
+E b a -3 1
+E Lb a % 1
+TEN
+T Ln b *
+TEXT
+Even when @A could help @B, @A decided it was not worth to take the risk. However, the Gods took away the danger. @B hated @A because @A was a coward. 
+
+ACT
+Did_not_spare 2
+PRE
+T Ce b a
+TEXT
+@B's previous behaviors confused @A but the anger was bigger than the forgiveness and a second opportunity was no longer an option for @B.
+
+ACT
+did_not_survive 1
+PRE
+T Lr a *
+TEN
+T Ad a *
+TEXT
+Even when @A made a great effort to survive, the gods called @A to join them.
+
+ACT
+died_by_injuries 1
+PRE
+T Hr a *
+TEN
+T Ad a
+TEXT
+The injuries that @A received were very serious. So, while praying to Mictlantecuhtli (the Lord of the land of the dead) @A died.
+The injuries that @A received were very serious. However, @A knew that when a Mexica dies fighting, the Gods protect that soul in order it arrives safely to the other world. So, @A died in peace.
+
+ACT
+discovered_murder 2
+PRE
+E a b +2 4
+POS
+E a b -3 1
+TEXT
+@A was kissing @B when suddenly @A recognised @B's tatoo. It was the same as the one used by the fraternity which had murdered @A's father some months ago. At once all those terrible memories were present again.
+Suddenly,  @A saw that @B had the sacred knife that had been stolen from the temple some months ago; there was not a doubt: @B was the murderer of the priest.  
+
+ACT
+discovered_true 2
+PRE
+E a b +2 4
+POS
+E a b -3 1
+TEXT
+@A was kissing @B when suddenly @A recognized @B's tattoo. It was the same as the one used by the fraternity which had murdered @A's father some months ago. At once all those terrible memories were present again.
+Suddenly,  @A saw that @B had the sacred knife that had been stolen from the temple some months ago; there was not a doubt: @B was the murderer of the priest.  
+
+ACT
+Escaped 1
+PRE
+T Pr a *
+TEN
+T Pf a
+TEXT
+@A had the opportunity and escaped.
+
+ACT
+Exiled 2
+PRE
+E a b -2 4
+POS
+E b a -3 1
+P b 2
+TEXT
+@A -after consulting a Shaman- decided to exile @B.
+
+ACT
+Faked_Stab_Instead_hurt_himself 2
+PRE
+E a b -2 4
+POS
+E b a -2 1
+TEN
+T Hr a
+TEXT
+@A tried to scare @B by pretending that @A wanted to kill @B with a lance. But instead, @A stumbled and wounded itself.
+
+ACT
+Fell_in_love 2
+PRE
+E a b +1 4
+POS
+E a b +3 2
+TEXT
+Although at the beginning @A did not want to admit it, @A fell in love with @B.
+
+ACT
+felt_envy_for 2
+POS
+E a b -1 1
+TEXT
+@A perceived how @B was a richer person. Since @A was a very ambitious person, @A developed a envy for @B's social position.
+
+ACT
+Felt_Guilty_With 2
+PRE
+E b a -3 4
+POS
+E b a -3 1
+E a a -3 1
+TEXT
+@A felt guilty for all the things that @A did to @B.
+
+ACT
+felt_strong_envy_for 2
+POS
+E a b -3 1
+TEXT
+@A perceived how people loved and admired @B. Since @A was a very insecure person, @A developed a strong envy for @B.
+
+ACT
+felt_Threatened_by 2
+POS
+E a b -3 1
+TEXT
+@A felt threatened by @B's presence.
+
+ACT
+Followed 2
+POS
+P a b_pos
+TEXT
+Without being noticed, @A followed @B.
+
+ACT
+forced_marriage_with 2
+PRE
+E a b +3 2
+E b a -1 4
+TEN
+T Lr a b
+T Pr b a
+TEXT
+@A realised that @B did not felt the same way and planed a forced marriage. @B now is a prisoner in @A's house and there's nothing to do. Although, @A's life is endangered.
+
+ACT
+Fought 2
+PRE
+E a b -2 4
+E b a -2 4
+POS
+E b a -3 1
+E a b -3 1
+TEN
+T Lr b a +
+T Lr a b +
+TEXT
+Suddenly, @A and @B were involved in a violent fight.
+
+ACT
+Found_by_accident 2
+POS
+P a b_pos
+TEXT
+While walking around, @A suddenly saw @B.
+
+ACT
+Got_intensely_Jealous_of 2
+POS
+E a b -3 1
+TEXT
+A bad spirit took @A's soul provoking that @A got intensely jealous of @B.
+
+ACT
+Got_Jealous_Of 2
+POS
+E a b -2 1
+TEXT
+A bad spirit took @A's soul provoking that @A got jealous of @B.
+
+ACT
+Got_married_with 2
+PRE
+E a b +1 4
+E b a +1 4
+POS
+E a b +3 2
+E b a +3 2
+P a b_pos
+TEXT
+The love that @A felt towards @B could not be hidden anymore, and they decided to join their lives for the eternity.
+
+ACT
+Got_sick 1
+TEN
+T Hr a
+TEXT
+@A was walking when Ehecatl (God of the wind) blew and a bad spirit entered @A's body. Now @A's life is threatened.	
+
+ACT
+Had_an_accident 1
+TEN
+T Hr a
+TEXT
+@A was walking when Ehecatl (God of the wind) blew and an old tree collapsed injuring badly @A.
+Tlaloc -the God of the rain- was angry and sent a storm. The heavy rain damaged the old wooden bridge. When @A tried to cross the river the bridge collapsed injuring badly @A's head.
+
+ACT
+Hated 2
+POS
+E a b -3 1
+TEXT
+@A hated @B.
+
+ACT
+hated_and_loved 2
+PRE
+E a b -2 4
+E a b +2 4
+POS
+E a b +3 1
+E a b -3 1
+TEXT
+@A had mixed feelings towards @B. On one hand @A loved @B but on the other hand @A hated @B's actions.
+
+ACT
+Healed 1
+PRE
+T Hr a *
+TEN
+T Hn a *
+TEXT
+@A went in search of some medical plants with no satisfactory result. Despite this, Tlazolteotl (the god of health) took pity of @A and was magically healed.
+
+ACT
+honor_was_damaged_by 2
+PRE
+E a b -3 4
+POS
+E La b % 1
+TEXT
+@B damaged @A's honor.
+
+ACT
+honored_Huitzilopochtli_with_his_life 1
+TEN
+T Ad a
+TEXT
+@A received a message from Huitzilopochtli, God of the war, demanding his life to save his nation. With no further thinking, @A dedided to jump into the lake and died.
+
+ACT
+Hurt 2
+PRE
+E a b -3 4
+POS
+E b a -3 1
+E Lb a % 1
+TEN
+T Hr b a
+TEXT
+@A took a war lance and hurt seriously @B.
+
+ACT
+Kidnapped 2
+POS
+E b a -3 1
+E Lb a % 1
+P a 9
+P b 9
+TEN
+T Pr b a
+TEXT
+@A was an ambitious person and wanted to be rich and powerful. So, @A kidnapped @B and went to Chapultepec forest. @A's plan was to ask for an important amount of cacauatl (cacao beans) and quetzalli (quetzal) feathers to liberate @B.
+@A was an ambitious person and wanted power and money in an easy way. So, @A kidnapped @B and went to Chapultepec forest. @A's plan was to ask for an important amount of cacauatl (cacao beans) and quetzalli (quetzal) feathers to liberate @B.
+During the last war @B's father humillated @A's family. Now, it was time of revanche and @A kidnapped @B. They went to the forest where @A tied @B to a huge rock. Exactly at midnight @A would cut @B up.
+
+ACT
+Killed 2
+PRE
+E a b -3 4
+POS
+E b a -3 1
+E Lb a % 1
+TEN
+T Ad b a
+TEXT
+@A felt a deeply odium for @B. Invoking Huitzilopochtli, God of the war, @A cut @B's jugular. The blood covered the floor.
+@A threw some dust in @B's face. Then, using a dagger @A perforated @B's chess. Imitating the Sacred Ceremony of the Sacrifice, @A took @B's heart with one hand and raised it towards the sun as a sign of respect to the Gods.
+@A took a dagger and cut @B's throat. @B bled to death while Tonatiuh (the God representing the sun) disappeared in the horizon.
+
+ACT
+Laugh_at 2
+POS
+E b a -2 1
+TEXT
+@A made fun and laugh at @B.
+
+ACT
+Life_at_Risk_by_Accident 1
+TEN
+T Lr a *
+TEXT
+Suddenly, a huge snake, the sacred animal, attacked @A.
+
+ACT
+Looked_For_And_Found 2
+POS
+P a b_pos
+TEXT
+Meanwhile @A decided to start a search for @B. After hard work and difficult moments @A could finally find @B.
+
+ACT
+Loved 2
+POS
+E a b +3 1
+TEXT
+@A admired and felt a strong affection for @B.
+
+ACT
+Made_Prisioner 2
+PRE
+E a b -2 4
+POS
+E b a -3 1
+P b 7
+TEN
+T Pr b a
+TEXT
+@A put @B into jail. @B could not hide how much @B loathed @A.
+
+ACT
+Met 2
+TEXT
+One day @A was introduced to @B.
+
+ACT
+Mugged 2
+POS
+E b a -3 1
+E Lb a -3 1
+TEXT
+When nobody noticed it, @A mugged @B.
+
+ACT
+offered_in_sacrifice 2
+PRE
+T Pr b *
+TEN
+T Ad b
+TEXT
+@A believed that Quetzalcoatl (the feathered-snake) had selected @B to die. Thus, @A killed @B.
+
+ACT
+paid_his_sentence 1
+PRE
+T Pr a *
+POS
+P a 5
+TEN
+T Pf a
+T Stn a
+T Sdn a
+T Sbn a
+TEXT
+Finally, after a long time paying his social debts, @A was finally free.
+
+ACT
+prepared_to_Sacrifice 2
+POS
+E b a -3 1
+TEN
+T Pr b a
+T Lr b a +
+TEXT
+@A decided to offer @B's heart to Huitzilopochtli. @A tied @B to the stone of the sacrificies and prepared the sacred dagger.
+
+ACT
+ran_and_hide_from 2
+PRE
+E a b -3 4
+POS
+P a 2
+TEXT
+@A felt panic and ran away to hide from @B in the Popocatepetl.
+
+ACT
+ran_and_hide 1
+PRE
+E a b -3 4
+POS
+P a 2
+TEXT
+@A felt remorse and ran away to hide in the Popocatepetl.
+
+ACT
+ran_away_from 2
+PRE
+T Lr a b
+POS
+P a 2
+TEXT
+@A felt panic and ran away from @B to hide in the Popocateptl.
+
+ACT
+ran_away 1
+PRE
+T Lr a *
+POS
+P a 2
+TEXT
+@A felt panic and ran away to hide in the Popocateptl.
+
+ACT
+relatives_envy 2
+POS
+E a b -2 1
+E b a +3 1
+TEXT
+@B was admired by the locals. @B loved @A since they were relatives. However, @A was a sick person and could not stand @B's popularity. @A felt a strong envy for @B.
+Although @A and @B were relatives, @B always received all the attention from the family. That is why @A hated @B.
+@A and @B grow up together. However, @A was an evil person and never was able to accept @B 's popularity. @A really hated @B!
+
+ACT
+Rescued 2
+PRE
+T Pr b *
+POS
+E b a +3 1
+E Lb a % 1
+TEN
+T Pf b a
+TEXT
+Thus, while Tlahuizcalpantecuhtli (the God who affected people's fate with his lance) observed, @A cut the rope which bound @B. Finally, @B was free again!
+@A walked towards @B. Full of admiration for all the braveness that @B had shown in those hard moments @A liberated @B!
+
+ACT
+Rewarded 2
+PRE
+E a b +3 1
+POS
+E b a +3 1
+TEXT
+@A rewarded @B with some cacauatl (cacao beans) and quetzalli (quetzal) feathers.
+
+ACT
+sacrificed_himherself 1
+TEN
+T Ad a
+TEXT
+@A believed that Quetzalcoatl (the feathered-snake) had selected @A to die. Thus, @A killed himself.
+
+ACT
+Saved_life 2
+PRE
+T Lr b *
+POS
+E b a +3 1
+TEN
+T Ln b *
+TEXT
+The rumour had spread fast. @B had fallen into the river and @A saved @B's life.
+
+ACT
+Sent_to_Chapultepec_Forest 2
+POS
+P b 9
+TEXT
+@A perceived a risky situation and decided to send @B to the forest.
+
+ACT
+Took_for_wife 2
+PRE
+E a b +1 2
+POS
+E b a -3 1
+TEXT
+@A was in love with @B and decided to make a life together. @A decided to marry @B, even without approval.
+
+ACT
+Tried_to_abuse 2
+POS
+E b a -3 1
+E Lb a % 1
+TEXT
+@A tried to sexually abuse from @B.
+
+ACT
+Tried_to_force_kiss 2
+POS
+E b a -2 1
+E Lb a % 1
+TEXT
+@A tried to kiss and hug @B.
+
+ACT
+Was_attracted_to 2
+POS
+E a b +2 2
+TEXT
+@A felt a strong attraction for @B.
+
+ACT
+was_brother_of 2
+POS
+E a b +3 1
+TEXT
+@A was a brother of @B.
+
+ACT
+was_father_of 2
+POS
+E a b +3 1
+TEXT
+PENDING TEXT
+
+ACT
+Was_Fond_Of 2
+POS
+E a b +1 1
+TEXT
+From the first day they met, @A felt a special affection for @B.
+
+ACT
+Was_Friend_Of 2
+POS
+E a b +2 1
+TEXT
+PENDING TEXT
+
+ACT
+Was_in_love_with 2
+POS
+E a b +3 2
+TEXT
+@A was in love with @B.
+
+ACT
+Was_Told 1
+TEXT
+PENDING TEXT
+
+ACT
+Went_back_home 1
+POS
+P a 5
+TEXT
+@A went back to Tenochtitlan
+
+ACT
+Went_back_home_with 2
+POS
+P a 5
+P b 5
+TEXT
+@A went back to Tenochtitlan witn @B
+
+ACT
+Went_Chapultepec_Forest 1
+POS
+P a 9
+TEXT
+Early in the morning @A went to Chapultepec Forest.
+
+ACT
+Went_Chapultepec_Forest_with 2
+POS
+P a 9
+P b 9
+TEXT
+Early in the morning @A and @B went to Chapultepec Forest.
+
+ACT
+Went_Hunting 1
+POS
+P a 2
+TEXT
+@A went hunting to the Popocateplt volcano.
+
+ACT
+Went_Hunting_with 2
+POS
+P a 2
+P b 2
+TEXT
+@A invited @B to go hunting to the Popocateplt volcano.
+
+ACT
+Went_Jail 1
+POS
+P a 7
+TEXT
+@A went to the jail.
+
+ACT
+Went_Palace 1
+POS
+P a 4
+TEXT
+@A went to Tlatoani's palace.
+
+ACT
+Went_Popocatepetl_Volcano 1
+POS
+P a 2
+TEXT
+@A went to Popocateptl Volcano.
+
+ACT
+Went_Popocatepetl_Volcano_With 2
+POS
+P a 2
+P b 2
+TEXT
+@A invited @B to go climbing to the Popocateptl Volcano.
+
+ACT
+Went_Temple_With 2
+POS
+P a 6
+P b 6
+TEXT
+@A went to Quetzalcoatl temple with @B.
+
+ACT
+Went_Temple 1
+POS
+P a 6
+TEXT
+@A went to Quetzalcoatl temple.
+
+ACT
+Went_Tenochtitlan_City_with 2
+POS
+P a 5
+P b 5
+TEXT
+@A and @B went back home, to the Great Tenochtitlan city.
+@A and @B went to the Great Tenochtitlan City.
+
+ACT
+Went_Tenochtitlan_City 1
+POS
+P a 5
+TEXT
+@A decided to go back to the Great Tenochtitlan city.
+
+ACT
+Went_Texcoco_Lake 1
+POS
+P a 1
+TEXT
+@A went to Texcoco Lake.
+
+ACT
+Went_Texcoco_Lake_with 2
+POS
+P a 1
+P b 1
+TEXT
+@A invited @B to walk by Texcoco Lake and enjoy the sunset.
+
+ACT
+Went_Tlatelolco_Market 1
+POS
+P a 3
+TEXT
+@A decided to go shoping to the Tlatelolco Market.
+
+ACT
+Went_Tlatelolco_Market_with 2
+POS
+P a 3
+P b 3
+TEXT
+PENDING TEXT
+
+ACT
+Were_attracted_to 2
+POS
+E a b +2 2
+E b a +2 2
+TEXT
+For long time @A and @B had been flirting. Now, openly they accepted the mutual attraction they felt for each other.
+
+ACT
+Were_brothers 2
+POS
+E a b +3 1
+E b a +3 1
+TEXT
+@A and @B were brothers and loved each other.
+
+ACT
+Were_friends 2
+POS
+E a b +2 1
+E b a +2 1
+TEXT
+@A and @B had met in the teocalli (school). Since then they had been good friends.
+
+ACT
+Were_In_Love 2
+POS
+E a b +3 2
+E b a +3 2
+TEXT
+@A and @B were in love.
+
+ACT
+Were_married 2
+POS
+E a b +3 2
+E b a +3 2
+TEXT
+@A and @B had decided to share their lives togethers as long as Quetzalcoatl (the feathered-snake) allowed them to do so.
+
+ACT
+Were_rivals 2
+POS
+E a b -2 1
+E b a -2 1
+TEXT
+For long time @A and @B had been rivals. Now, those feelings seemed to grow more and more.
+
+ACT
+Wounded 2
+PRE
+E a b -3 4
+POS
+E b a -3 1
+E Lb a -3 1
+TEN
+T Hr b a
+TEXT
+In a fast movement, @A wounded @B. An intense haemorrhage arouse which weakened @B.
+
+END

@@ -1,0 +1,176 @@
+ACT
+Actor 1
+TEXT
+@A was an inhabitant of the Great Tenochtitlan.
+
+ACT
+CLASH_EMOTION_1 2  ;the first time it appears in the story
+TEXT
+@A had ambivalent thoughts towards @B. On the one hand @A had strong feelings for @B but on the other hand @A abominated what @B did.
+@A was emotionaly tied to @B but @A could not accept @B's behaviour. What did @A must do?
+
+ACT
+CLASH_EMOTION_2 2  ; the second time a Ce appears in a story
+TEXT
+@A was shocked by @B's actions and for some seconds @A did not know what to do.
+
+ACT
+CLASH_EMOTION_3 1  ; When in a Ce both characters are the same.
+TEXT
+@A was emotionally devastated and was not sure if what @A did was right. @A was really confused.
+@A was emotionally devastated and confused, and was not sure if what @A did was right.
+
+ACT
+Health_Risk_1 2 ; A=heroe    B=Victim   A is aware of Hr(B)
+TEXT
+@A knew that @B could die and that @A had to do something about it.
+
+ACT
+Health_Risk_2 1
+TEXT
+@A was dying and nobody knew about it.
+
+ACT
+Life_Risk_1 2 ; A=heroe    B=Victim   A is aware of Lr(B)
+TEXT
+@A knew that the @B's life was in risk and had to do something about it.
+
+ACT
+Life_Risk_2 1  ;
+TEXT
+The life of @A was in risk and nobody knew about it.
+
+ACT
+Love_Competition_1 2 ;Both aware Same Class
+TEXT
+@A and @B were in love with the same person, and none of them would give up.
+
+ACT
+Love_Competition_2 2 ;Both aware. Victim social class > Competitor
+TEXT
+@A and @B were in love with the same person. @A did not believe that someone like @B could think in winning this love-war.
+
+ACT
+Love_Competition_3 2 ;Both aware  Competitor > Victim
+TEXT
+@A and @B were in love with the same person. @B did not believe that someone like @A could think in winning this love-war.
+
+ACT
+Love_Competition_4 2 ;Victim (ChA) aware. Victim = Competitior
+TEXT
+@B did not know that both, @B and @A were in love with the same person. @A would try to take advantage of this situation.
+
+ACT
+Love_Competition_5 2 ;Victim (ChA) aware. Victim > Competitior
+TEXT
+@A knew that @B would try to steal @A's lover. In a very arrogant attitute, @A expressed that someone like @B never would be a risk.
+
+ACT
+Love_Competition_6 2 ;Victim (ChA) aware.  Victim < Competitior
+TEXT
+@A knew that @B would try to steal @A's lover. However, @A believed that @B was superior.
+
+ACT
+Love_Competition_7 2 ;Competitior (ChB) aware. Victim = Competitior
+TEXT
+@A did not know that both, @A and @B were in love with the same person. @B would try to take advantage of this situation.
+
+ACT
+Love_Competition_8 2 ;Competitior (ChB) aware. Victim > Competitior
+TEXT
+@B knew that @A would try to steal @B's lover. In a very arrogant attitute, @B expressed that someone like @A never would be a risk.
+
+ACT
+Love_Competition_9 2 ;Competitior (ChB) aware. Victim < Competitior
+TEXT
+@B knew that @A would try to steal @B's lover. However, @B believed that @A was superior.
+
+ACT
+Pr_Free_1 2  ; A=heroe    B=Victim   A is aware of Hr(B)
+TEXT
+Although it was very dangerus @A decided to do something in order to liberate @B. For some minutes @A prayed to Quetzalcoatl -the feathered-snake, the God between the Gods- and asked for wisdom and braveness. Now @A was ready to find out its fate.
+Suddenly, the day turned into night and after seconds the sun shone again. @A was scared. The Shaman explained to @A that Tonatiuh (the divinity representing the sun) was demanding @A to rescue @B and punish the criminal. Otherwise @A's family would die.
+
+ACT
+Pr_Free_2 1  ; A=Victim
+TEXT
+@A was a prisioner and nobody knew about it.
+
+ACT SOCIAL
+Social_Complain 2 ;Generic texts for social norms
+TEXT
+@A broke Mexica's will with his action against @B. Now @A will have to face his fate.
+@A's impulsive behavior against @B was perceived by the Mexicas as an improper act. @A was challenging his destiny.
+
+ACT SOCIAL
+Forbidden_Love 2 ;A=Mexica lover B=Enemy A love(+3) B
+POS
+E * a -1 5	;Any aware character generates a social emotion with intensity -1 against the action performer
+SOCIAL
+character receiver	;The character receiver is socially relevant
+relation none		;No social relation is socially relevant
+TEXT
+@A realised that her only love sprung from her only hate! Prodigious birth of love it was to @A, that she must love a loathed enemy.
+
+ACT SOCIAL
+Friendly_Enemy 2 ;A=Mexica B=Enemy B friend(+3) A
+POS
+E * a -1 5
+SOCIAL
+character receiver
+relation none
+TEXT
+@A realised that the most loathed person for the Mexicas, @B, became a heroe in front of his eyes.
+
+ACT SOCIAL
+Coward_Fighter 2 ;A=JK B=Mexica A ran away
+POS
+E * a -1 5
+SOCIAL
+character performer
+relation none
+TEXT
+@A felt panic and ran away. When @A reached a safe place, @A remembered the promise made to Huitzilopochtli (the God of war) to never give up a fight because cowards die a thousand times, but valiants never taste of death but once.
+
+ACT SOCIAL
+Disrespectful_Behavior 2 ;A disrespectful behavior against a B. Social relation: A <<<< B
+POS
+E * a -1 5
+SOCIAL
+character none
+relation social		;The social relation between the characters is socially relevant
+
+TEXT
+@A, in a fit of anger, acted disrespectfully against @B, one of the God's representatives. @A will have to pay for his behavior.
+
+ACT SOCIAL
+Divine_Disobedience 2 ;A rescues B who is being prepared to sacrifice
+POS
+E * a -1 5
+SOCIAL
+character none
+relation none
+TEXT
+What might happen when someone goes against God's will? The answer will be revealed to @A.
+
+ACT SOCIAL
+Sacred_Love 2 ;A=Pt A falls in love of a Mexica
+POS
+E * a -1 5
+SOCIAL
+character performer
+relation none
+TEXT
+@A had made vows of chastity. @A realised that this love sprung from his fears! @A will have to choose between @B and his God's.
+
+ACT SOCIAL
+Gender_Violence 2 ;A=Male B=Female A JA against B
+POS
+E * a -1 5
+SOCIAL
+character none
+relation gender
+TEXT
+Even when @B provoked @A's anger, there was no valid reason for such violent behavior.
+
+END

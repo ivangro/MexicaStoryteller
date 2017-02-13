@@ -1,0 +1,115 @@
+ACT SOCIAL
+Social_Complain 2 ;Generic texts for social norms
+POS
+insert E * a -1 5
+SOCIAL
+character NoCharacter
+relation NoRelation
+TEXT
+@A broke Mexica's will with his action against @B. Now @A will have to face his fate.
+@A's impulsive behavior against @B was perceived by the Mexicas as an improper act. @A was challenging his destiny.
+
+ACT SOCIAL
+Strong_Social_Complain 2
+POS
+insert T * a Sd
+SOCIAL
+character NoCharacter
+relation NoRelation
+TEXT
+@A will face a generalized rejection by the Mexicas. @A badly broke Mexica's will with his action against @B.
+@A awoke Mexica's indignation. @A's impulsive behavior against @B was perceived by the Mexicas as an indecorous act.
+
+
+ACT SOCIAL
+Forbidden_Love 2
+POS
+insert E * a -1 5
+SOCIAL
+character Receiver
+relation NoRelation
+TEXT
+@A realised that her only love sprung from her only hate! Prodigious birth of love it was to @A, that she must love a loathed enemy.
+
+ACT SOCIAL
+Friendly_Enemy 2
+POS
+insert E * a -1 5
+SOCIAL
+character Receiver
+relation NoRelation
+TEXT
+@A realised that the most loathed person for the Mexicas, @B, became a heroe in front of his eyes.
+
+ACT SOCIAL
+Coward_Fighter 2
+POS
+insert E * a -1 5
+SOCIAL
+character Performer
+relation NoRelation
+TEXT
+@A felt panic and ran away. When @A reached a safe place, @A remembered the promise made to Huitzilopochtli (the God of war) to never give up a fight because cowards die a thousand times, but valiants never taste of death but once.
+
+ACT SOCIAL
+Coward_Behavior 2
+POS
+insert E * a -1 5
+SOCIAL
+character NoCharacter
+relation NoRelation
+TEXT
+@A felt panic and ran away. When @A reached a safe place, @A remembered the promise made to Huitzilopochtli (the God of war) to never give up a fight because cowards die a thousand times, but valiants never taste of death but once.
+
+
+ACT SOCIAL
+Disrespectful_Behavior 2
+POS
+insert T * a Sd
+SOCIAL
+character NoCharacter
+relation Social
+TEXT
+@A, in a fit of anger, acted disrespectfully against @B, one of the God's representatives. @A will have to pay for his behavior.
+
+ACT SOCIAL
+Divine_Disobedience 2
+POS
+insert E * a -1 5
+SOCIAL
+character NoCharacter
+relation NoRelation
+TEXT
+What might happen when someone goes against God's will? The answer will be revealed to @A.
+
+ACT SOCIAL
+Sacred_Love 2
+POS
+insert E * a -1 5
+SOCIAL
+character Performer
+relation NoRelation
+TEXT
+@A had made vows of chastity. @A realised that this love sprung from his fears! @A will have to choose between @B and his God's.
+
+ACT SOCIAL
+Gender_Violence 2
+POS
+insert E * a -1 5
+SOCIAL
+character NoCharacter
+relation Gender
+TEXT
+Even when @B provoked @A's anger, there was no valid reason for such violent behavior.
+
+ACT SOCIAL
+Made_his_duty_with 2
+POS
+justify E * a -1 5
+SOCIAL
+character Performer
+relation NoRelation
+TEXT
+@A realised that the @B's behavior was not appropriate and in an act of bravery decided to make his duty, even risking his life.
+
+END

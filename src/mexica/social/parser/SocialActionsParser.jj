@@ -1,0 +1,176 @@
+//Prevents from creating static method for the class
+options {
+    STATIC = false;
+}
+
+PARSER_BEGIN(SocialActionsParser)
+package mexica.social.parser;
+
+import java.io.*;
+import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import mexica.MexicaParameters;
+import mexica.core.*;
+import mexica.social.*;
+import slant.MexicaFileConfiguration;
+
+public class SocialActionsParser {
+    private List<SocialAction> socialActions;
+    private SocialAction action;
+
+    public SocialActionsParser(String path) throws IOException {
+        this(new FileInputStream(path));
+        socialActions = new ArrayList<SocialAction>();
+    }
+
+    public List<SocialAction> getSocialActions() {
+        return socialActions;
+    }
+
+    public static void main(String[] args) throws ParseException, TokenMgrError, IOException {
+        try {
+            MexicaFileConfiguration config = new MexicaFileConfiguration();
+            config.loadConfiguration();
+        } catch (IOException ex) {
+            Logger.getGlobal().log(Level.SEVERE, null, ex);
+        }
+        SocialActionsParser parser = new SocialActionsParser(MexicaParameters.SOCIAL_ACTIONS_FILE);
+        parser.start();
+    }
+
+    public void createAction(String name, int noCharacters) {
+        if (action != null)
+            socialActions.add(action);
+        action = new SocialAction();
+        action.setActionName(name);
+        action.setNoCharacters(noCharacters);
+    }
+
+    public void setPoscondition(String performer, String receiver, String intensity, String emotionType) {
+        Poscondition pos = new Poscondition();
+        pos.setCharacterA(performer);
+        pos.setCharacterB(receiver);
+        pos.setConditionType(ConditionType.Emotion);
+        pos.setEmotionType(emotionType);
+        pos.setIntensity(Integer.parseInt(intensity));
+        action.addPoscondition(pos);
+    }
+
+    public void setPoscondition(String performer, String receiver, String tensionType) {
+        Tension ten = new Tension();
+        ten.setCharacterA(performer);
+        ten.setCharacterB(receiver);
+        ten.setConditionType(ConditionType.Tension);
+        ten.setTensionType(tensionType);
+        action.addTension(ten);
+    }
+
+    public void setSocialData(String character, String relation) {
+        action.setSocialCharacter(character);
+        action.setSocialRelation(relation);
+    }
+
+    public void addText(String text) {
+        action.addText(text);
+    }
+}
+PARSER_END(SocialActionsParser)
+
+SKIP : { <COMMENT : ";"(<WORD>)? (<SPACE> <WORD>)* > }
+TOKEN : { <SPACE : " " | "\t" > }
+TOKEN : { <NEW_LINE: "\n" | "\r" | "\r\n" > }
+
+TOKEN : { <SOCIAL_ACTION: "ACT SOCIAL" > }
+TOKEN : { <POSCONDITION: "POS" > }
+TOKEN : { <EMOTION: "E"> }
+TOKEN : { <TENSION: "T"> }
+TOKEN : { <TENSION_TYPE: "Sd" | "Sb" | "St" | "Scc" | "Sor" | "Sbr" | "Str" > }
+TOKEN : { <SOCIAL_DATA: "SOCIAL"> }
+TOKEN : { <TEXT: "TEXT"> }
+TOKEN : { <SOCIAL_CHARACTER: "character" > }
+TOKEN : { <SOCIAL_RELATION: "relation" > }
+TOKEN : { <SOCIAL_MODE: "insert" | "remove" | "justify" > }
+TOKEN : { <END_OF_FILE: "END" > }
+TOKEN : { <SOCIAL_CHARACTER_OPT: "NoCharacter" | "BothCharacters" | "Performer" | "Receiver" > }
+TOKEN : { <SOCIAL_RELATION_OPT: "NoRelation" | "BothRelations" | "Social" | "Gender" > }
+TOKEN : { <STAR: "*" > }
+TOKEN : { <WORD: (["a"-"z","A"-"Z","_","@","!","?",",",".","(",")","'","=","+"])+ > }
+TOKEN : { <NUMBER: ("-")?["0"-"9"]> }
+
+void start() :
+{Token mode = null;}
+{
+    (
+        <SOCIAL_ACTION> (<SPACE>)* <NEW_LINE> parseSocialAction() <NEW_LINE>
+        (<POSCONDITION> (<SPACE>)* <NEW_LINE> 
+        mode = <SOCIAL_MODE> (<SPACE>)+ (parseEmotion() | parseTension()) <NEW_LINE>)?
+        {
+            action.setSocialPosconditionMode(mode.image);
+        }
+        (<SOCIAL_DATA> (<SPACE>)* <NEW_LINE> parseSocialData() <NEW_LINE>)?
+        <TEXT> (<SPACE>)* <NEW_LINE> parseTexts() (<NEW_LINE>)*
+    )*
+    (<END_OF_FILE> | <EOF>)
+    {
+        createAction(null, 0);
+    }
+}
+
+void parseSocialAction() :
+{Token name = null, characters = null;}
+{
+    name=<WORD> (<SPACE>)+ characters=<NUMBER> (<SPACE>)*
+    {
+        createAction(name.image, Integer.parseInt(characters.image));
+    }
+}
+
+void parseEmotion() :
+{Token perf = null, rec = null, intensity = null, emotionType = null;}
+{
+    <EMOTION> (<SPACE>)+ (perf=<WORD> | perf=<STAR>) (<SPACE>)+ (rec=<WORD> | rec=<STAR>) (<SPACE>)+
+    intensity = <NUMBER> (<SPACE>)+ emotionType = <NUMBER> (<SPACE>)*
+    {
+        setPoscondition(perf.image, rec.image, intensity.image, emotionType.image);
+    }
+}
+
+void parseTension() :
+{Token perf = null, rec = null, tensionType = null;}
+{
+    <TENSION> (<SPACE>)+ (perf=<WORD> | perf=<STAR>) (<SPACE>)+ (rec=<WORD> | rec=<STAR>) (<SPACE>)+
+    tensionType=<TENSION_TYPE> (<SPACE>)*
+    {
+        setPoscondition(perf.image, rec.image, tensionType.image);
+    }
+}
+
+void parseSocialData() :
+{Token socialCharacter = null, socialRelation = null;}
+{
+    <SOCIAL_CHARACTER> (<SPACE>)+ socialCharacter = <SOCIAL_CHARACTER_OPT> (<SPACE>)* <NEW_LINE>
+    <SOCIAL_RELATION> (<SPACE>)+ socialRelation = <SOCIAL_RELATION_OPT> (<SPACE>)*
+    {
+        setSocialData(socialCharacter.image, socialRelation.image);
+    }
+}
+
+void parseTexts() :
+{
+    Token text = null, text2 = null;
+    int count = 0;
+    String phrase = "";
+}
+{
+    (
+        text = <WORD> {phrase = text.image;}
+
+        ((<SPACE>)+ text2 = <WORD>
+            { phrase += " " + text2.image;}
+        )* <NEW_LINE>
+        {
+            addText(phrase);
+        }
+    )+
+}

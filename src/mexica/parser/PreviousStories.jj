@@ -1,0 +1,239 @@
+/**
+ * Parse previous stories for Mexica 
+ * USAGE: javacc previousStories.jj, will generate the associated classes
+ */
+options {
+    STATIC = false;
+}
+
+PARSER_BEGIN(PreviousStories)
+package mexica.parser;
+
+import java.io.*;
+import java.util.*;
+import mexica.*;
+import mexica.CharacterName;
+import mexica.core.*;
+import mexica.engagement.parser.PreviousStory;
+import mexica.social.*;
+import mexica.story.*;
+
+public class PreviousStories {
+    private List<PreviousStory> stories;
+    private PreviousStory story;
+    private ActionStore actionStore;
+
+    public PreviousStories(ActionStore actions) throws FileNotFoundException {
+        this(actions, MexicaParameters.PREV_STORIES_FILE);
+    }
+
+    public PreviousStories(ActionStore actions, File file) throws FileNotFoundException {
+       this(new FileInputStream(file));
+       actionStore = actions;
+       stories = new ArrayList<PreviousStory>();
+   }
+
+    public PreviousStories(ActionStore actions, String path) throws FileNotFoundException {
+       //this(PreviousStories.class.getClassLoader().getResourceAsStream(path));
+       this(new FileInputStream(path));
+       actionStore = actions;
+       stories = new ArrayList<PreviousStory>();
+       //MexicaParameters.ENABLE_ILLOGICAL_ACTIONS = true;
+   }
+
+    public List<PreviousStory> getStories() {
+        return stories;
+    }
+    
+    public static void main(String[] args) throws ParseException, TokenMgrError, FileNotFoundException {
+        //System.out.println("Analyzing previous stories");
+        MexicaRepository.getInstance().loadData();
+        MexicaParameters.ENABLE_ILLOGICAL_ACTIONS = true;
+        ActionStore store = MexicaRepository.getInstance().getActions();
+        PreviousStories parser = new PreviousStories(store, MexicaParameters.PREV_STORIES_FILE);
+        parser.Start(); 
+    }
+
+    public void composite(Token gossipperToken, Token performerToken, Token actionNameToken, Token receiverToken) {
+        Action realizedAction, action;
+        ActionInstantiated instance, realizedInstance;
+        CharacterName gossipper, performer, receiver;
+        
+        //Create the realized action
+        realizedAction = new Action();
+        realizedAction.setActionName("Realised");
+        realizedAction.setNoCharacters(1);
+        action = actionStore.getAction(actionNameToken.image);
+
+        //Retrieve the characters
+        gossipper = CharacterName.valueOfIgnoreCase(gossipperToken.image);
+        performer = CharacterName.valueOfIgnoreCase(performerToken.image);
+        if (receiverToken != null) {
+            receiver = CharacterName.valueOfIgnoreCase(receiverToken.image);
+            instance = new ActionInstantiated(action, performer, receiver);
+            action = new CompositeAction(realizedAction, instance);
+            realizedInstance = new ActionInstantiated(action, gossipper, performer, receiver);
+        }
+        else {
+            instance = new ActionInstantiated(action, performer);
+            action = new CompositeAction(realizedAction, instance);
+            realizedInstance = new ActionInstantiated(action, gossipper, performer);
+        }
+        
+        story.addAction(realizedInstance);
+    }
+
+    public void action(Token performerToken, Token actionNameToken, Token receiverToken) {
+        Action action;
+        ActionInstantiated instance;
+        CharacterName performer, receiver;
+
+        if (actionNameToken.image.equalsIgnoreCase("actor"))
+            return;
+
+        //Create the action
+        action = actionStore.getAction(actionNameToken.image);
+
+        //Retrieve the characters
+        performer = CharacterName.valueOfIgnoreCase(performerToken.image);
+        if (receiverToken != null) {
+            receiver = CharacterName.valueOfIgnoreCase(receiverToken.image);
+            instance = new ActionInstantiated(action, performer, receiver);
+        }
+        else {
+            instance = new ActionInstantiated(action, performer);
+        }
+        if (action instanceof SocialAction) {
+            List<ActionInstantiated> actions = story.getActions();
+            ActionInstantiated lastAction = actions.get(actions.size()-1);
+            lastAction.setSocialAction(instance);
+        }
+        else
+            story.addAction(instance);
+    }
+    
+    @Deprecated
+    public void socialAction(Token performer, Token actionName, Token receiver, 
+                             Token generalizableCharacter, Token relation, Token socialNorm, Token owner) {
+        List<ActionInstantiated> actions = story.getActions();
+        ActionInstantiated instance = actions.get(actions.size()-1);
+        SocialCharacter socialCharacter = SocialCharacter.parse(generalizableCharacter.image, relation.image);
+        SocialStatus socialStatus = SocialStatus.parse(socialNorm.image);
+        CharacterName contextOwner;
+        contextOwner  = (owner != null) ? CharacterName.valueOf(owner.image) : CharacterName.valueOf(performer.image);
+        //instance.setSocialData(socialCharacter, actionName.image, socialStatus, contextOwner);
+    }
+}
+
+PARSER_END(PreviousStories)
+
+MORE : { ";" : IN_SINGLE_LINE_COMMENT }
+<IN_SINGLE_LINE_COMMENT>
+SPECIAL_TOKEN : { <SINGLE_LINE_COMMENT: "\n" | "\r" | "\r\n" > : DEFAULT }
+<IN_SINGLE_LINE_COMMENT>
+MORE : { < ~[] > }
+
+TOKEN : { <SPACE : " " | "\t" > }
+TOKEN : { <NEW_LINE: "\n" | "\r" | "\r\n" > }
+TOKEN : { <REALISED : "realised" | "REALISED" | "realized" | "REALIZED" | "Realised" | "Realized" > }
+TOKEN : { <STORY_ID : "Sto" (<SPACE>)* ";" (<SPACE>)* <NUMBER> > }
+TOKEN : { <STORY_BEGIN : "START" ((<SPACE>)+ <WORD>)? > }
+TOKEN : { <END_OF_FILE : "END" > }
+
+TOKEN : { <SOCIAL_MARKER : "*" > }
+TOKEN : { <NON_GENERALIZABLE_CHARACTER : "Performer" | "Receiver" | "Both" | "NoCharacter" > }
+TOKEN : { <RELATION_TYPE : "Social" | "Gender" | "NoRelation" > }
+TOKEN : { <SOCIAL_NORM_TYPE : "Special" | "Exception" > }
+TOKEN : { <WORD : (["a"-"z","A"-"Z","_"])+ > }
+TOKEN : { <NUMBER : (["0"-"9"])+ ("."(["0"-"9"])+)? > }
+
+void Start() : 
+{ Token initialLocation = null; }
+{
+    (
+    <STORY_ID>
+    <NEW_LINE>
+    initialLocation = <STORY_BEGIN>
+    {
+        story = new PreviousStory();
+        String location = initialLocation.image.replace("START", "").trim();
+        if (location.length() > 0)
+            story.setInitialLocation(location);
+    }
+    <NEW_LINE>
+    parseStory()
+    <NEW_LINE>
+    {
+        stories.add(story);
+    }
+    )*
+    <END_OF_FILE>
+    {
+        //System.out.println("End of file detected");
+    }
+}
+
+void parseStory() :
+{ Token firstCharacter = null; }
+{
+    ((firstCharacter = <WORD>
+    <SPACE>
+    ( analyzeComposite(firstCharacter) | analyzeAction(firstCharacter) )) 
+    |
+    analyzeSocialAction())*
+}
+
+void analyzeComposite(Token gossipper) :
+{ Token performer = null, receiver = null, actionName = null; }
+{
+    <REALISED><SPACE>
+    performer = <WORD>
+    <SPACE>
+    actionName = <WORD>
+    (<SPACE>
+    receiver = <WORD>
+    )?
+    <NEW_LINE>
+    {
+        composite(gossipper, performer, actionName, receiver);
+    }
+}
+
+void analyzeAction(Token performer) : 
+{ Token receiver = null, actionName = null; }
+{
+    actionName = <WORD>
+    (<SPACE>
+    receiver = <WORD>
+    )?
+    <NEW_LINE>
+    {
+        action(performer, actionName, receiver);
+    }
+}
+
+void analyzeSocialAction() :
+{ Token performer = null, receiver = null, socialAction = null, generalizableCharacter = null, 
+        relation = null, socialNorm = null, owner = null; }
+{
+    <SOCIAL_MARKER><SPACE>
+    performer = <WORD>
+    <SPACE>
+    socialAction = <WORD>
+    <SPACE>
+    (receiver = <WORD>
+    <SPACE>
+    )?
+    generalizableCharacter = <NON_GENERALIZABLE_CHARACTER>
+    <SPACE> 
+    relation = <RELATION_TYPE> 
+    <SPACE> 
+    socialNorm = <SOCIAL_NORM_TYPE>
+    (<SPACE>
+    owner = <WORD>
+    )?
+    <NEW_LINE>
+    {
+        socialAction(performer, socialAction, receiver, generalizableCharacter, relation, socialNorm, owner);
+    }
+}

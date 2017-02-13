@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE slantstory [
+
+<!--
+   Relations inside Mexica 0.1, Rafael Perez y Perez
+
+   There are two types of relations: emotions and tensions
+   An emotion has a name, numeric value, text and textual transcription.
+   The name is a non-spaced phrase that identifies internally an emotion
+   The numeric value is an integer that uniquely identifies an emotion
+   The text is a character representing the emotion inside the actions' library
+   The textual representation is employed to represent an emotion as a String to the user
+
+   $Revision: 0.1 $
+   $Date: 04-02-2015$
+   $Author: Ivan Guerrero$
+   Comments:
+   
+-->
+
+<!ELEMENT relations (emotions, tensions)>
+
+<!ELEMENT emotions (emotion*)>
+<!ELEMENT emotion EMPTY>
+<!ATTLIST emotion name CDATA #REQUIRED>
+<!ATTLIST emotion value CDATA #REQUIRED>
+<!ATTLIST emotion text CDATA #REQUIRED>
+<!ATTLIST emotion textualRepresentation CDATA #REQUIRED>
+<!ATTLIST emotion social (true | false)>
+<!ATTLIST emotion inLove (true | false)>
+<!ATTLIST emotion any (true | false)>
+
+<!ELEMENT tensions (tension*)>
+<!ELEMENT tension EMPTY>
+<!ATTLIST tension name CDATA #REQUIRED>
+<!ATTLIST tension abbreviation CDATA #REQUIRED>
+
+]>

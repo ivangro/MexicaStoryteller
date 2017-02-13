@@ -1,0 +1,228 @@
+Sto; 1.1
+START Palace
+Jaguar_Knight admired_and_respected Tlatoani
+Tlatoani went_texcoco_lake_with Jaguar_Knight
+Tlatoani had_an_accident
+Warrior found_by_accident Jaguar_Knight
+Warrior hated Jaguar_Knight
+Warrior attacked Jaguar_Knight
+Jaguar_Knight ran_away_from Warrior
+Jaguar_Knight Coward_Fighter Warrior
+Warrior Realised Tlatoani had_an_accident
+Warrior laugh_at Tlatoani
+Warrior Disrespectful_Behavior Tlatoani
+Tlatoani died_by_injuries
+Jaguar_Knight Realised Tlatoani died_by_injuries
+Jaguar_Knight sacrificed_himherself
+
+Sto; 1.2
+START Palace
+Eagle_Knight admired_and_respected Priest
+Priest went_texcoco_lake_with Eagle_Knight
+Priest had_an_accident
+Enemy found_by_accident Eagle_Knight
+Enemy hated Eagle_Knight
+Enemy attacked Eagle_Knight
+Eagle_Knight ran_away_from Enemy
+Eagle_Knight Coward_Fighter Enemy
+Enemy Realised Priest had_an_accident
+Enemy hated Priest
+Enemy attacked Priest
+Priest did_not_survive
+Eagle_Knight Realised Priest did_not_survive
+Eagle_Knight sacrificed_himherself
+
+Sto; 1.3
+START City
+Princess were_in_love Artist
+Priest went_temple_with Artist
+Priest prepared_to_sacrifice Artist
+Princess Realised Priest prepared_to_sacrifice Artist
+Princess looked_for_and_found Artist
+Princess rescued Artist
+Princess Divine_Disobedience Artist
+Priest hated Princess
+Priest attacked Princess
+Artist killed Priest
+Princess went_texcoco_lake_with Artist
+
+Sto; 1.4
+START City
+Prince was_fond_of Priest
+Priest was_fond_of Princess
+Priest had_an_accident
+Prince cured Priest
+Priest rewarded Prince
+Prince were_in_love Princess
+Prince commited_suicide
+Priest fell_in_love Princess
+Priest Sacred_Love Princess
+Princess did_not_love Priest
+Priest sacrificed_himherself
+
+Sto; 1.5
+START City
+Eagle_Knight was_friend_of Lady
+Eagle_Knight fell_in_love Lady
+Lady did_not_love Eagle_Knight
+Eagle_Knight affronted Lady
+Lady attacked Eagle_Knight
+Eagle_Knight hurt Lady
+Eagle_Knight Gender_Violence Lady
+Lady died_by_injuries
+Eagle_Knight commited_suicide
+
+Sto ;1.6
+START
+Eagle_Knight Actor
+Jaguar_Knight Actor
+Eagle_Knight Was_In_Love_With Princess
+Jaguar_Knight Was_In_Love_With Princess
+Princess Was_In_Love_With Warrior
+Eagle_Knight Got_Intensely_Jealous_Of Warrior
+Eagle_Knight Killed Warrior
+Princess Attacked Eagle_Knight
+Eagle_Knight Wounded Princess
+Jaguar_Knight Attacked Eagle_Knight
+Jaguar_Knight Fought Eagle_Knight
+Jaguar_Knight Killed Eagle_Knight
+Jaguar_Knight cured Princess
+Jaguar_Knight Exiled Jaguar_Knight
+
+Sto ; 1.7
+START
+JAGUAR_KNIGHT ACTOR
+PRINCESS ACTOR
+HUNTER ACTOR
+HUNTER TRIED_TO_FORCE_KISS JAGUAR_KNIGHT
+JAGUAR_KNIGHT EXILED HUNTER
+HUNTER WENT_TEXCOCO_LAKE
+HUNTER WOUNDED JAGUAR_KNIGHT
+PRINCESS REALISED HUNTER WOUNDED JAGUAR_KNIGHT
+PRINCESS CURED JAGUAR_KNIGHT
+ENEMY KIDNAPPED PRINCESS
+ENEMY GOT_INTENSELY_JEALOUS_OF PRINCESS
+ENEMY ATTACKED PRINCESS
+JAGUAR_KNIGHT LOOKED_FOR_AND_FOUND ENEMY
+JAGUAR_KNIGHT HAD_AN_ACCIDENT
+ENEMY PREPARED_TO_SACRIFICE JAGUAR_KNIGHT
+HUNTER FOUND_BY_ACCIDENT JAGUAR_KNIGHT
+HUNTER KILLED JAGUAR_KNIGHT
+HUNTER COMMITED_SUICIDE
+
+Sto ; 1.8
+START Palace
+Prince Went_Texcoco_Lake
+Prince Had_An_Accident
+Priest Found_By_Accident Prince
+Priest Realised Prince Had_An_Accident
+Priest Cured Prince
+Prince Went_Palace
+Fisherman Mugged Priest
+Prince Realised Fisherman Mugged Priest
+Prince Looked_For_And_Found Fisherman
+Prince Made_Prisioner Fisherman
+
+Sto ; 1.9
+START City
+Eagle_Knight Were_In_Love Lady
+Eagle_Knight Loved Princess
+Lady Loved Princess
+Princess Went_Popocatepetl_Volcano
+Enemy Kidnapped Princess
+Eagle_Knight Realised Enemy Kidnapped Princess
+Eagle_Knight Looked_For_And_Found Enemy
+Eagle_Knight Attacked Enemy
+Eagle_Knight Fought Enemy
+Eagle_Knight Killed Enemy
+Eagle_Knight Rescued Princess
+Princess Fell_In_Love Eagle_Knight
+Princess Realised Eagle_Knight Were_In_Love Lady
+Princess Hated Lady
+Princess Looked_For_And_Found Lady
+Princess Killed Lady
+Eagle_Knight Realised Princess Killed Lady
+Eagle_Knight Followed Princess
+Eagle_Knight Killed Princess
+Eagle_Knight Killed Eagle_Knight
+
+Sto ; 1.10
+START
+Tlatoani Was_Father_Of Prince
+Tlatoani Went_Hunting_With Prince
+Tlatoani Had_An_Accident
+Prince Did_Not_Cure Tlatoani
+Prince Went_Tenochtitlan_City
+Hunter Found_By_Accident Tlatoani
+Hunter Realised Tlatoani Had_An_Accident
+Hunter Cured Tlatoani
+Tlatoani Rewarded Hunter
+Tlatoani Looked_For_And_Found Prince
+Tlatoani Exiled Prince
+
+Sto ; 1.11
+START
+Eagle_Knight Was_In_Love_With Lady
+Eagle_Knight Went_Tlatelolco_Market
+Lady Was_Attracted_To Jaguar_Knight
+Lady Went_Texcoco_Lake_With Jaguar_Knight
+Eagle_Knight Followed Lady
+Eagle_Knight Realised Lady Was_Attracted_To Jaguar_Knight
+Eagle_Knight Got_Intensely_Jealous_Of Jaguar_Knight
+Eagle_Knight Attacked Jaguar_Knight
+Eagle_Knight Wounded Jaguar_Knight
+Lady Cured Jaguar_Knight
+Eagle_Knight Exiled Eagle_Knight
+
+Sto ; 1.12
+START
+Eagle_Knight Was_In_Love_With Lady
+Eagle_Knight Went_Tlatelolco_Market
+Lady Was_Attracted_To Jaguar_Knight
+Lady Went_Texcoco_Lake_With Jaguar_Knight
+Eagle_Knight Followed Lady
+Eagle_Knight Realised Lady Was_Attracted_To Jaguar_Knight
+Eagle_Knight Got_Jealous_Of Jaguar_Knight
+Eagle_Knight Attacked Jaguar_Knight
+Jaguar_Knight Fought Eagle_Knight
+Jaguar_Knight Killed Eagle_Knight
+
+Sto ; 1.13
+START
+Princess Went_Popocatepetl_Volcano
+Hunter Kidnapped Princess
+Farmer Found_By_Accident Hunter
+Farmer Realised Hunter Kidnapped Princess
+Hunter felt_Threatened_by Farmer
+Hunter Attacked Farmer
+Farmer Fought Hunter
+Hunter Wounded Farmer
+Hunter Ran_Away
+Princess Did_Not_Cure Farmer
+Princess Went_Tenochtitlan_City
+Farmer Died_By_Injuries
+
+Sto ; 1.14
+START
+Eagle_Knight Were_In_Love Lady
+Eagle_Knight Loved Princess
+Lady Loved Princess
+Princess Went_Popocatepetl_Volcano
+Enemy Kidnapped Princess
+Eagle_Knight Realised Enemy Kidnapped Princess
+Eagle_Knight Looked_For_And_Found Enemy
+Eagle_Knight Attacked Enemy
+Eagle_Knight Fought Enemy
+Eagle_Knight Killed Enemy
+Eagle_Knight Rescued Princess
+Princess Fell_In_Love Eagle_Knight
+Princess Realised Eagle_Knight Were_In_Love Lady
+Princess hated Lady
+Princess LOOKED_FOR_AND_FOUND Lady
+Princess Killed Lady
+Eagle_Knight Realised Princess Killed Lady
+Eagle_Knight LOOKED_FOR_AND_FOUND Princess
+Eagle_Knight Killed Princess
+Eagle_Knight Killed Eagle_Knight
+
+END
