@@ -1,10 +1,10 @@
 Gender_Hierarchy
-Male 2 (Tlatoani Priest Prince Eagle_Knight Jaguar_Knight Farmer Fisherman Artist Hunter Enemy Slave Trader Warrior)
-Female 1 (Princess Lady Virgin)
+Male 2 (Dracula Nosferatu Count_Von_Krolock Vampire_Researcher Hunter Priest Farmer Fisherman Host Villager Servant Trader)
+Female 1 (Lady Virgin)
 Social_Class_Hierarchy
-Nobility 5 (Tlatoani Priest)
-High_Society 4 (Prince Princess)
-Fighters 3 (Eagle_Knight Jaguar_Knight)
-Workers 2 (Farmer Fisherman Artist Lady Virgin Hunter Trader)
-Low_Society 1 (Enemy Slave Warrior)
+Nobility 5 (Priest)
+High_Society 4 (Dracula Nosferatu Count_Von_Krolock)
+Fighters 3 (Hunter Vampire_Researcher)
+Workers 2 (Farmer Fisherman Host Lady Virgin Trader)
+Low_Society 1 (Villager Servant)
 END

@@ -11,12 +11,12 @@
 ;    TPosition = ( NoWhere,
 ;                  Lake,  {Position 1}
 ;                  Mountains, {Position 2}
-;                  Market, {Position 3}
-;                  Palace,   {Position 4}
-;                  City,  {Position 5}
-;                  Temple,  {Position 6}
-;                  Jail,   {Position 7}
-;                  Chapultepec, {Position 8}
+;                  Cemetry, {Position 3}
+;                  Castle,   {Position 4}
+;                  Village,  {Position 5}
+;                  Farmhouse,  {Position 6}
+;                  Tavern,   {Position 7}
+;                  Forest, {Position 8}
 ;                  uncivilized_Lands, {Position 9}
 ;                  b_Pos);
 ;
@@ -952,7 +952,7 @@ Went_Palace 1
 POS
 P a 4
 TEXT
-@A went to Tlatoani's palace.
+@A went to Dracula's castle.
 SLANT
 depart A A_prevlocation
 enter A A_location

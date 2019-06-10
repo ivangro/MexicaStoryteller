@@ -31,7 +31,7 @@ public class SlantElementsParser {
     private int weaponIndex;
     
     private SlantElementsParser() {
-        weapons = Arrays.asList("weapon", "dagger", "knife", "obsidian_knife", "sharp_stone", "lance", "spear");
+        weapons = Arrays.asList("weapon", "dagger", "knife", "stake", "garlic", "cross", "holy water");
         weaponIndex = 0;
     }
     

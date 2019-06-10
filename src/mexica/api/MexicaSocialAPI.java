@@ -43,12 +43,12 @@ public class MexicaSocialAPI {
     }
     
     /**
-     * Creates a story object with the given actions. The default location is City.
+     * Creates a story object with the given actions. The default location is Village.
      * @param storyActions
      * @return 
      */
     public static Story createStory(List<ActionInstantiated> storyActions) {
-        return createStory(storyActions, Position.City);
+        return createStory(storyActions, Position.Village);
     }
     
     /**

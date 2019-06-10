@@ -11,7 +11,7 @@ public class Poscondition extends Condition {
      * Note: If the position is set to other character's position,
      * the attribute character's position is enabled and the characterB is set to 'b'
      * @param pos numeric value for position <br>
-     * NoWhere-0, Lake-1, Mountains-2, Market-3, Palace-4, City-5, Temple-6, Jail-7, {b_Pos}, UnknowknPos-9
+     * NoWhere-0, Lake-1, Mountains-2, Cemetry-3, Castle-4, Village-5, Farmhouse-6, Tavern-7, {b_Pos}, UnknowknPos-9
      */
     public void setPosition(String pos) {
         if (pos.equals("0"))
@@ -21,15 +21,15 @@ public class Poscondition extends Condition {
         else if (pos.equals("2")) 
             position = Position.Mountains;
         else if (pos.equals("3")) 
-            position = Position.Market;
+            position = Position.Cemetry;
         else if (pos.equals("4")) 
-            position = Position.Palace;
+            position = Position.Castle;
         else if (pos.equals("5")) 
-            position = Position.City;
+            position = Position.Village;
         else if (pos.equals("6")) 
-            position = Position.Temple;
+            position = Position.Farmhouse;
         else if (pos.equals("7")) 
-            position = Position.Jail;
+            position = Position.Tavern;
         else if (pos.equals("9")) 
             position = Position.UnknownPosition;
         else {

@@ -49,7 +49,7 @@ public class AtomGenerator {
     }
     
     public void generateAtomsFromStory(int storyID, List<ActionInstantiated> storyActions) {
-        generateAtomsFromStory(storyID, storyActions, Position.City);
+        generateAtomsFromStory(storyID, storyActions, Position.Village);
     }
 
     public void generateAtomsFromStory(int storyID, List<ActionInstantiated> storyActions, Position defaultPosition) {

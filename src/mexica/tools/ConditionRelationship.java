@@ -30,7 +30,7 @@ public enum ConditionRelationship {
      */
     EqualCharacters,
     /**
-     * When the employed characters or variables are equivalent (i.e. any vs. A || any vs. Tlatoani)
+     * When the employed characters or variables are equivalent (i.e. any vs. A || any vs. Dracula)
      */
     EquivalentCharacters
 };

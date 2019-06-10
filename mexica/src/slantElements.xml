@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <slantElements>
     <characters>          
-        <character id="Tlatoani" name="tlatoani" article="the" />
+        <character id="Dracula" name="Dracula" article="the" />
         <character id="Priest" name="priest" article="a" />
-        <character id="Prince" name="prince" article="a" />
-        <character id="Eagle_Knight" name="eagle knight" article="an" />
-        <character id="Jaguar_Knight" name="jaguar knight" article="a" />
+        <character id="Nosferatu" name="Nosferatu" article="a" />
+        <character id="Count" name="Count von Krolock" article="a" />
         <character id="Farmer" name="farmer" article="a" />
         <character id="Fisherman" name="fisherman" article="a" />
-        <character id="Artist" name="artist" article="an" />
+        <character id="Host" name="host" article="a" />
         <character id="Hunter" name="hunter" article="a" />
-        <character id="Enemy" name="enemy" article="an" />
-        <character id="Slave" name="slave" article="a" />
+        <character id="Villager" name="villager" article="an" />
+        <character id="Servant" name="servant" article="a" />
         <character id="Trader" name="trader" article="a" />
-        <character id="Warrior" name="warrior" article="a" />
+        <character id="Researcher" name="vampire researcher" article="a" />
         <character id="Princess" name="princess" article="a" />
         <character id="Lady" name="lady" article="a" />
         <character id="Virgin" name="virgin" article="a" />
     </characters>
     <locations>
-        <location id="City" name="Tenochtitlan city" article="the" />
-        <location id="Jail" name="jail" article="the" />
-        <location id="Lake" name="Texcoco lake" article="the" />
-        <location id="Market" name="Tlaltelolco market" article="the" />
-        <location id="Mountains" name="Popocatepetl volcano" article="the" />
-        <location id="Palace" name="palace" article="the" />
-        <location id="Temple" name="temple" article="the" />
-        <location id="UnknownPosition" name="Chapultepec forest" article="the" />
+        <location id="Village" name="Transylvanian village" article="the" />
+        <location id="Tavern" name="tavern" article="the" />
+        <location id="Lake" name="lake" article="the" />
+        <location id="Cemetry" name="cemetry" article="the" />
+        <location id="Mountains" name="mountains" article="the" />
+        <location id="Castle" name="castle" article="the" />
+        <location id="Farmhouse" name="Farmhose" article="the" />
+        <location id="UnknownPosition" name="forest" article="the" />
     </locations>
     <things>
         <thing id="weapon" name="weapon" article="a" />
-        <thing id="eagle" name="eagle" article="an" />
+        <thing id="bat" name="bat" article="a" />
         <thing id="goat_skin" name="goat skin" article="a" />
         <thing id="knife" name="knife" article="a" />
         <thing id="ropes" name="ropes" article="some" />
         <thing id="curative_plant" name="curative plant" article="a" />
-        <thing id="lance" name="lance" article="a" />
         <thing id="dagger" name="dagger" article="a" />
         <thing id="sacred_dagger" name="sacred dagger" article="a" />
         <thing id="river" name="river" article="a" />
-        <thing id="tattoo" name="tattoo" article="a" />
+        <thing id="bite mark" name="bite mark" article="a" />
         <thing id="murder" name="murder" article="a" />
         <thing id="knife" name="knife" article="a" />
-        <thing id="obsidian_knife" name="obsidian knife" article="an" />
-        <thing id="sharp_stone" name="sharp stone" article="a" />
-        <thing id="lance" name="lance" article="a" />
-        <thing id="spear" name="spear" article="a" />
+        <thing id="stake" name="stake" article="an" />
+        <thing id="garlic" name="garlic" article="a" />
+        <thing id="cross" name="cross" article="a" />
+        <thing id="holy water" name="holy water" article="a" />
     </things>
 </slantElements>

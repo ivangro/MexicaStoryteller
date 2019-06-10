@@ -5,11 +5,9 @@ package mexica;
  * @author Ivan Guerrero (UNAM, Mexico)
  */
 public enum CharacterName {
-    Tlatoani, 
-    Prince,
-    Princess,
-    Eagle_Knight,
-    Jaguar_Knight,
+    Dracula,
+    Nosferatu,
+    Count_Von_Krolock,
     Priest,
     Lady,
     Virgin,
@@ -17,11 +15,10 @@ public enum CharacterName {
     Hunter,
     Fisherman,
     Trader,
-    Warrior,
-    Artist,
-    Slave,
-    Enemy,
-    Enemy_Priest,
+    Vampire_Researcher,
+    Host,
+    Servant,
+    Villager,
     Beauty,
     Chaman,
     Not_Defined,
@@ -36,7 +33,7 @@ public enum CharacterName {
         }
         return Not_Defined;
     }
-    
+
     public static CharacterName valueOfName(String nameStr) {
         nameStr = nameStr.replaceAll(" ", "_");
         for (CharacterName name : CharacterName.values()) {
@@ -48,11 +45,9 @@ public enum CharacterName {
     
     public static String getAbbreviation(CharacterName name) {
         switch (name) {
-            case Tlatoani: return "T";
-            case Prince: return "P";
-            case Princess: return "Ps";
-            case Eagle_Knight: return "EK";
-            case Jaguar_Knight:return "JK";
+            case Dracula: return "T";
+            case Nosferatu: return "N";
+            case Count_Von_Krolock:return "CK";
             case Priest:return "Pt";
             case Lady:return "L";
             case Virgin:return "V";
@@ -60,11 +55,10 @@ public enum CharacterName {
             case Hunter:return "H";
             case Fisherman:return "Fs";
             case Trader:return "Tr";
-            case Warrior:return "W";
-            case Artist:return "A";
-            case Slave:return "S";
-            case Enemy:return "E";
-            case Enemy_Priest: return "EP";
+            case Vampire_Researcher:return "VR";
+            case Host:return "HO";
+            case Servant:return "S";
+            case Villager:return "VI";
             case Beauty: return "B";
             case Chaman: return "C";
             default: return "UNK";
@@ -73,11 +67,9 @@ public enum CharacterName {
     
     public static CharacterName valueFromAbbreviation(String abbreviation) {
         switch (abbreviation) {
-            case "T" : return Tlatoani;
-            case "P": return Prince;
-            case "Ps": return Princess;
-            case "EK": return Eagle_Knight;
-            case "JK": return Jaguar_Knight;
+            case "T" : return Dracula;
+            case "N": return Nosferatu;
+            case "CK": return Count_Von_Krolock;
             case "Pt": return Priest;
             case "L": return Lady;
             case "V": return Virgin;
@@ -85,11 +77,10 @@ public enum CharacterName {
             case "H": return Hunter;
             case "Fs": return Fisherman;
             case "Tr": return Trader;
-            case "W": return Warrior;
-            case "A": return Artist;
-            case "S": return Slave;
-            case "E": return Enemy;
-            case "EP": return Enemy_Priest;
+            case "VR": return Vampire_Researcher;
+            case "HO": return Host;
+            case "S": return Servant;
+            case "VI": return Villager;
             case "B": return Beauty;
             case "C": return Chaman;
             default: return Not_Defined;
@@ -98,8 +89,8 @@ public enum CharacterName {
     
     /** Characters that can be selected for an action */
     private static CharacterName[] selectableCharacters = new CharacterName[] {
-            Tlatoani, Prince, Princess, Eagle_Knight, Jaguar_Knight, Priest, Beauty, Chaman,
-            Lady, Virgin, Farmer, Hunter, Fisherman, Trader, Warrior, Artist, Slave, Enemy, Enemy_Priest
+            Dracula, Nosferatu, Count_Von_Krolock, Priest, Beauty, Chaman,
+            Lady, Virgin, Farmer, Hunter, Fisherman, Trader, Vampire_Researcher, Host, Servant, Villager
         };
     
     /**

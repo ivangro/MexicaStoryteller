@@ -37,7 +37,7 @@ public class PreviousStory {
         try {
             initialLocation = Position.valueOf(locationStr);
         } catch (Exception ex) {
-            initialLocation = Position.City;
+            initialLocation = Position.Village;
         }
     }
 

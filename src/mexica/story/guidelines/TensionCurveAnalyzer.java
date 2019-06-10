@@ -94,7 +94,7 @@ public class TensionCurveAnalyzer {
         
         Story story = new Story();
         if (initialPosition == null)
-            initialPosition = Position.City;
+            initialPosition = Position.Village;
         
         story.setDefaultPosition(initialPosition);
 
