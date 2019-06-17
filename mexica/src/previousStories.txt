@@ -1,7 +1,7 @@
 Sto; 1.1
 START Castle
 Count_Von_Krolock admired_and_respected Dracula
-Dracula went_texcoco_lake_with Count_Von_Krolock
+Dracula went_balea_lake_with Count_Von_Krolock
 Dracula had_an_accident
 Vampire_Researcher found_by_accident Count_Von_Krolock
 Vampire_Researcher hated Count_Von_Krolock
@@ -13,12 +13,11 @@ Vampire_Researcher laugh_at Dracula
 Vampire_Researcher Disrespectful_Behavior Dracula
 Dracula died_by_injuries
 Count_Von_Krolock Realised Dracula died_by_injuries
-Count_Von_Krolock sacrificed_himherself
 
 Sto; 1.2
 START Castle
 Nosferatu admired_and_respected Priest
-Priest went_texcoco_lake_with Nosferatu
+Priest went_balea_lake_with Nosferatu
 Priest had_an_accident
 Villager found_by_accident Nosferatu
 Villager hated Nosferatu
@@ -30,21 +29,18 @@ Villager hated Priest
 Villager attacked Priest
 Priest did_not_survive
 Nosferatu Realised Priest did_not_survive
-Nosferatu sacrificed_himherself
 
 Sto; 1.3
 START Village
 Beauty were_in_love Host
-Priest went_temple_with Host
-Priest prepared_to_sacrifice Host
-Beauty Realised Priest prepared_to_sacrifice Host
+Priest went_farmhouse_with Host
 Beauty looked_for_and_found Host
 Beauty rescued Host
 Beauty Divine_Disobedience Host
 Priest hated Beauty
 Priest attacked Beauty
 Host killed Priest
-Beauty went_texcoco_lake_with Host
+Beauty went_balea_lake_with Host
 
 Sto; 1.4
 START Village
@@ -52,16 +48,14 @@ Nosferatu was_fond_of Priest
 Priest was_fond_of Beauty
 Priest had_an_accident
 Nosferatu cured Priest
-Priest rewarded Nosferatu
 Nosferatu were_in_love Beauty
 Nosferatu commited_suicide
 Priest fell_in_love Beauty
 Priest Sacred_Love Beauty
 Beauty did_not_love Priest
-Priest sacrificed_himherself
 
 Sto; 1.5
-START City
+START Village
 Nosferatu was_friend_of Lady
 Nosferatu fell_in_love Lady
 Lady did_not_love Nosferatu
@@ -87,7 +81,6 @@ Count_Von_Krolock Attacked Nosferatu
 Count_Von_Krolock Fought Nosferatu
 Count_Von_Krolock Killed Nosferatu
 Count_Von_Krolock cured Beauty
-Count_Von_Krolock Exiled Count_Von_Krolock
 
 Sto ; 1.7
 START
@@ -95,8 +88,7 @@ Count_Von_Krolock ACTOR
 Beauty ACTOR
 HUNTER ACTOR
 HUNTER TRIED_TO_FORCE_KISS Count_Von_Krolock
-Count_Von_Krolock EXILED HUNTER
-HUNTER WENT_TEXCOCO_LAKE
+HUNTER WENT_Balea_LAKE
 HUNTER WOUNDED Count_Von_Krolock
 Beauty REALISED HUNTER WOUNDED Count_Von_Krolock
 Beauty CURED Count_Von_Krolock
@@ -105,30 +97,29 @@ Villager GOT_INTENSELY_JEALOUS_OF Beauty
 Villager ATTACKED Beauty
 Count_Von_Krolock LOOKED_FOR_AND_FOUND Villager
 Count_Von_Krolock HAD_AN_ACCIDENT
-Villager PREPARED_TO_SACRIFICE Count_Von_Krolock
 HUNTER FOUND_BY_ACCIDENT Count_Von_Krolock
 HUNTER KILLED Count_Von_Krolock
 HUNTER COMMITED_SUICIDE
 
 Sto ; 1.8
 START Palace
-Dracula Went_Texcoco_Lake
+Dracula Went_Balea_Lake
 Dracula Had_An_Accident
 Dracula Found_By_Accident Farmer
 Dracula Realised Farmer Had_An_Accident
 Priest Cured Dracula
-Dracula Went_Palace
+Dracula Went_Castle
 Fisherman Mugged Priest
 Dracula Realised Fisherman Mugged Priest
 Dracula Looked_For_And_Found Fisherman
 Dracula Made_Prisioner Fisherman
 
 Sto ; 1.9
-START City
+START Village
 Nosferatu Were_In_Love Lady
 Nosferatu Loved Beauty
 Lady Loved Beauty
-Beauty Went_Popocatepetl_Volcano
+Beauty Went_Mountains
 Villager Kidnapped Beauty
 Nosferatu Realised Villager Kidnapped Beauty
 Nosferatu Looked_For_And_Found Villager
@@ -149,37 +140,33 @@ Nosferatu Killed Nosferatu
 Sto ; 1.10
 START
 Dracula Was_Father_Of Beauty
-Dracula Went_Hunting_With Beauty
 Dracula Had_An_Accident
 Beauty Did_Not_Cure Dracula
-Beauty Went_Tenochtitlan_City
+Beauty Went_Village
 Hunter Found_By_Accident Dracula
 Hunter Realised Dracula Had_An_Accident
 Hunter Cured Dracula
-Dracula Rewarded Hunter
 Dracula Looked_For_And_Found Beauty
-Dracula Exiled Beauty
 
 Sto ; 1.11
 START
 Nosferatu Was_In_Love_With Lady
-Nosferatu Went_Tlatelolco_Market
+Nosferatu Went_Cemetery
 Lady Was_Attracted_To Count_Von_Krolock
-Lady Went_Texcoco_Lake_With Count_Von_Krolock
+Lady Went_Balea_Lake_With Count_Von_Krolock
 Nosferatu Followed Lady
 Nosferatu Realised Lady Was_Attracted_To Count_Von_Krolock
 Nosferatu Got_Intensely_Jealous_Of Count_Von_Krolock
 Nosferatu Attacked Count_Von_Krolock
 Nosferatu Wounded Count_Von_Krolock
 Lady Cured Count_Von_Krolock
-Nosferatu Exiled Nosferatu
 
 Sto ; 1.12
 START
 Nosferatu Was_In_Love_With Lady
-Nosferatu Went_Tlatelolco_Market
+Nosferatu Went_Cemetery
 Lady Was_Attracted_To Count_Von_Krolock
-Lady Went_Texcoco_Lake_With Count_Von_Krolock
+Lady Went_Balea_Lake_With Count_Von_Krolock
 Nosferatu Followed Lady
 Nosferatu Realised Lady Was_Attracted_To Count_Von_Krolock
 Nosferatu Got_Jealous_Of Count_Von_Krolock
@@ -189,7 +176,7 @@ Count_Von_Krolock Killed Nosferatu
 
 Sto ; 1.13
 START
-Beauty Went_Popocatepetl_Volcano
+Beauty Went_Mountains
 Hunter Kidnapped Beauty
 Farmer Found_By_Accident Hunter
 Farmer Realised Hunter Kidnapped Beauty
@@ -199,7 +186,7 @@ Farmer Fought Hunter
 Hunter Wounded Farmer
 Hunter Ran_Away
 Beauty Did_Not_Cure Farmer
-Beauty Went_Tenochtitlan_City
+Beauty Went_Village
 Farmer Died_By_Injuries
 
 Sto ; 1.14
@@ -207,7 +194,7 @@ START
 Nosferatu Were_In_Love Lady
 Nosferatu Loved Beauty
 Lady Loved Beauty
-Beauty Went_Popocatepetl_Volcano
+Beauty Went_Mountains
 Villager Kidnapped Beauty
 Nosferatu Realised Villager Kidnapped Beauty
 Nosferatu Looked_For_And_Found Villager

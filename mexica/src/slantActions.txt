@@ -11,7 +11,7 @@
 ;    TPosition = ( NoWhere,
 ;                  Lake,  {Position 1}
 ;                  Mountains, {Position 2}
-;                  Cemetry, {Position 3}
+;                  Cemetery, {Position 3}
 ;                  Castle,   {Position 4}
 ;                  Village,  {Position 5}
 ;                  Farmhouse,  {Position 6}
@@ -59,7 +59,7 @@
 ;
 ; words MUST be separated with "_" -> "curative_Plan"  "Jaguar_Knight"
 ;
-; The system does not distinguish bewteen uppercase and lowercase, i.e. 'a' = 'A'
+; The system does not distinguish between uppercase and lowercase, i.e. 'a' = 'A'
 ;MEXICA DOES NOT check the syntax. So be careful to avoid mistakes
 ;
 
@@ -69,7 +69,7 @@ Admired_and_respected 2 ;
 POS
 E a b +2 1
 TEXT
-@A respected and admired @B because of @B's heroic and intrepid behaviour during the last flowery-war.
+@A respected and admired @B because of @B's heroic and intrepid behaviour during the last vampire battle.
 SLANT
 admire A B
 
@@ -102,22 +102,6 @@ SLANT
 observe A B 
 draw A weapon 
 attack A B
-
-ACT
-Attempted_to_steal 2
-PRE
-E b a +1 *
-POS
-E b a -2 1
-TEXT
-@A bumped into @B while two drunk hunters were fighting. Taking advantage of the confusion, @A attempted to steal @B's goat-skin. @B realised of this situation and got furious.
-SLANT
-encounter A B
-see B eagle 
-overlook B A   ;distract eagle B
-try_to_steal_from A B
-catch B A
-anger B A
 
 ;BBBBBBBBBBBBBBBBBBBBBBBBB
 ACT
@@ -158,7 +142,7 @@ TEN
 T Hn b a
 TEXT
 @A went in search of some medical plants and cured @B. As a result @B was very grateful to @A.
-@A had heard that the Tepescohuitle was an effective curative plant. So, @A prepared a plasma and applied it to @B's wounds. It worked and @B started to recuperate! @B realised that @A's determination had saved @B's life.
+@A had heard that the angelica archangelica was an effective curative plant. So, @A prepared a plasma and applied it to @B's wounds. It worked and @B started to recuperate! @B realised that @A's determination had saved @B's life.
 SLANT
 locate A curative_plant 
 cure A B curative_plant  ;example of agent, direct and indirect
@@ -185,7 +169,7 @@ T Hr b *
 POS
 E b a +2 1
 TEXT
-@A tried to cure @B, but @A did not know how to use the curative plants.
+@A tried to cure @B, but @A did not know how to treat bite wounds.
 SLANT
 locate A curative_plant
 NOT know_how_to_cure A B
@@ -209,7 +193,7 @@ E Lb a % 1
 TEN
 T Ln b *
 TEXT
-Even when @A could help @B, @A decided it was not worth to take the risk. However, the Gods took away the danger. @B hated @A because @A was a coward. 
+Even when @A could help @B, @A decided it was not worth to take the risk. However, the danger passed suddenly. @B hated @A because @A was a coward.
 SLANT
 NOT save A B
 
@@ -232,41 +216,10 @@ T Hr a *
 TEN
 T Dead a
 TEXT
-The injuries that @A received were very serious. So, while praying to Mictlantecuhtli (the Lord of the land of the dead) @A died.
-The injuries that @A received were very serious. However, @A knew that when a Mexica dies fighting, the Gods protect that soul in order it arrives safely to the other world. So, @A died in peace.
+The injuries that @A received were very serious. @A didn't have a chance to survive and died.
 SLANT
 suffer A
 die A
-
-ACT
-discovered_murder 2
-PRE
-E a b +2 *
-POS
-E a b -3 1
-TEXT
-@A was kissing @B when suddenly @A recognised @B's tatoo. It was the same as the one used by the fraternity which had murdered @A's father some months ago. At once all those terrible memories were present again.
-Suddenly,  @A saw that @B had the sacred knife that had been stolen from the temple some months ago; there was not a doubt: @B was the murderer of the priest.  
-SLANT
-notice A tattoo
-recognize A B
-remember A murder
-hate A B
-
-ACT
-discovered_true 2
-PRE
-E a b +2 *
-POS
-E a b -3 1
-TEXT
-@A was kissing @B when suddenly @A recognized @B's tattoo. It was the same as the one used by the fraternity which had murdered @A's father some months ago. At once all those terrible memories were present again.
-Suddenly,  @A saw that @B had the sacred knife that had been stolen from the temple some months ago; there was not a doubt: @B was the murderer of the priest.  
-SLANT
-notice A tattoo
-recognize A B
-remember A murder
-hate A B
 
 ;EEEEEEEEEEEEEEEEEEEEEEEEEEE
 ACT
@@ -280,36 +233,7 @@ TEXT
 SLANT
 escape A ;NOTE did not show up
 
-ACT
-Exiled 2
-PRE
-E a b -2 *
-POS
-E b a -3 1
-P b 9 ; Uncivilized lands
-TEXT
-@A -after consulting a Shaman- decided to exile @B.
-SLANT
-exile A B
-depart B B_prevlocation ;CHANGED from A_prevlocation in case A has not moved
-enter B B_location ;(Ivan) Checked
-
 ;FFFFFFFFFFFFFFFFFFFFFFFFF
-ACT
-Faked_Stab_Instead_hurt_himself 2
-PRE
-E a b -2 *
-POS
-E b a -2 1
-TEN
-T Hr a
-TEXT
-@A tried to scare @B by pretending that @A wanted to kill @B with a lance. But instead, @A stumbled and wounded itself.
-SLANT
-feint A _ B ;CHANGED
-stumble A ;CHANGED
-injure A A
-
 ACT
 Fell_in_love 2
 PRE
@@ -412,18 +336,6 @@ get_jealous_of A B
 
 ;HHHHHHHHHHHHHHHHHHHHHHH
 ACT
-Had_an_accident 1
-TEN
-T Hr a -
-TEXT
-@A was walking when Ehecatl (God of the wind) blew and an old tree collapsed injuring badly @A.
-Tlaloc -the God of the rain- was angry and sent a storm. The heavy rain damaged the old wooden bridge. When @A tried to cross the river the bridge collapsed injuring badly @A's head.
-SLANT
-slide A
-fall A
-injure A A
-
-ACT
 Hated 2
 POS
 E a b -3 1
@@ -471,26 +383,6 @@ hurt A B lance
 ;KKKKKKKKKKKKKKKKKKKKKKKKKKKKK
 
 ACT
-Kidnapped 2
-POS
-E b a -3 1
-E Lb a % 1
-P a 8  {Forest}
-P b 8
-TEN
-T Pr b a
-TEXT
-@A was an ambitious person and wanted to be rich and powerful. So, @A kidnapped @B and went to Chapultepec forest. @A's plan was to ask for an important amount of cacauatl (cacao beans) and quetzalli (quetzal) feathers to liberate @B.
-@A was an ambitious person and wanted power and money in an easy way. So, @A kidnapped @B and went to Chapultepec forest. @A's plan was to ask for an important amount of cacauatl (cacao beans) and quetzalli (quetzal) feathers to liberate @B.
-During the last war @B's father humillated @A's family. Now, it was time of revanche and @A kidnapped @B. They went to the forest where @A tied @B to a huge rock. Exactly at midnight @A would cut @B up.
-SLANT
-kidnap A B A_prevlocation ; A is agent, B is direct, A_prevlocation when acts as indirect changes the location displayed
-depart A A_prevlocation
-depart B B_prevlocation
-enter A A_location
-enter B B_location
-
-ACT
 Killed 2
 PRE
 E a b -3 *
@@ -500,9 +392,7 @@ E Lb a % 1
 TEN
 T Dead b a
 TEXT
-@A felt a deeply odium for @B. Invoking Huitzilopochtli, God of the war, @A cut @B's jugular. The blood covered the floor.
-@A threw some dust in @B's face. Then, using a dagger @A perforated @B's chess. Imitating the Sacred Ceremony of the Sacrifice, @A took @B's heart with one hand and raised it towards the sun as a sign of respect to the Gods.
-@A took a dagger and cut @B?s throat. @B bled to death while Tonatiuh (the God representing the sun) disappeared in the horizon.
+PENDING TEXT
 SLANT
 kill A B weapon
 
@@ -522,12 +412,11 @@ Life_at_Risk_by_Accident 1
 TEN
 T Lr B *
 TEXT
-Suddenly, a huge snake, the sacred animal, attacked @A.
+Suddenly, a huge bat attacked @A.
 SLANT
 slide A
 fall A
 injure A A
-
 
 ACT
 Looked_For_And_Found 2
@@ -542,7 +431,6 @@ enter A A_location ;CHANGED moved from after look_, changed to A from B_location
 ;travel A CHANGED commented out
 look_all_around A
 find A B
-
 
 ACT
 Loved  2     ; OjO***  it's not the same TO LOVE that TO BE IN LOVE
@@ -605,19 +493,6 @@ rob A B
 
 
 ;PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
-ACT
-prepared_to_Sacrifice 2
-POS
-E b a -3 1
-TEN
-T Pr b a
-T Lr b a +
-TEXT
-@A decided to offer @B's heart to Huitzilopochtli. @A tied @B to the stone of the sacrificies and prepared the sacred dagger.
-SLANT
-bind A B
-take A sacred_dagger
-
 
 ;QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
 
@@ -630,7 +505,7 @@ T Lr a * +
 POS
 P a 2  {Popo}
 TEXT
-@A felt panic an ran away to hide in the Popocateptl.
+@A felt panic an ran away to hide in the Carpathians.
 SLANT
 panic A _ A_prevlocation ;CHANGED to add location
 depart A A_prevlocation
@@ -644,7 +519,7 @@ T Lr a b +
 POS
 P a 2  {Popo}
 TEXT
-@A felt panic and ran away from @B to hide in the Popocateptl.
+@A felt panic and ran away from @B to hide in the Carpathians.
 SLANT
 panic A _ A_prevlocation ;CHANGED to add location
 depart A A_prevlocation
@@ -658,7 +533,7 @@ E a b -3 *
 POS
 P a 2
 TEXT
-@A felt remorse and ran away to hide in the Popocatepetl.
+@A felt remorse and ran away to hide in the Carpathians.
 SLANT
 panic A _ A_prevlocation ;CHANGED
 depart A A_prevlocation
@@ -672,7 +547,7 @@ E a b -3 *
 POS
 P a 2
 TEXT
-@A felt panic and ran away to hide from @B in the Popocatepetl.
+@A felt panic and ran away to hide from @B in the Carpathians.
 SLANT
 panic A _ A_prevlocation
 depart A A_prevlocation
@@ -707,34 +582,11 @@ E Lb a % 1
 TEN
 T Pf b a
 TEXT
-Thus, while Tlahuizcalpantecuhtli (the God who affected people's fate with his lance) observed, @A cut the rope which bound @B. Finally, @B was free again!
 @A walked towards @B. Full of admiration for all the braveness that @B had shown in those hard moments @A liberated @B!
 SLANT
 rescue A B
 
-ACT
-Rewarded 2
-PRE
-E a b +3 1
-POS
-E b a +3 1
-TEXT
-@A rewarded @B with some cacauatl (cacao beans) and quetzalli (quetzal) feathers.
-SLANT
-reward A B
-
 ;SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-
-ACT
-sacrificed_himherself 1
-TEN
-T Dead a
-TEXT
-@A believed that Quetzalcoatl (the feathered-snake) had selected @A to die. Thus, @A killed himself.
-SLANT
-injure A A
-die A
-
 ACT
 Saved_life 2
 POS
@@ -823,72 +675,34 @@ ACT
 Was_Told 1 ;NOTE does not show up, no SLANT actions
 
 ACT
-Went_back_home 1
-POS
-P a 5 ; Tenochtitlan
-SLANT
-depart A A_prevlocation
-enter A A_location
-go_home A ;CHANGED
-
-ACT
-Went_back_home_with 2
-POS
-P a 5 ; Tenochtitlan
-P b 5
-SLANT
-;go_home A A_prevlocation CHANGED loc added, commented out, TODO make this smoother
-depart A A_prevlocation
-depart B A_prevlocation ;CHANGED added moved up
-enter A A_location
-enter B A_location ;CHANGED added
-go_home A _ B ;CHANGED added
-;accompany B A CHANGED commented out
-
-ACT
-Went_Chapultepec_Forest 1
+Went_Forest 1
 POS
 P a 8          ; a pos = forest
 TEXT
-Early in the morning @A went to Chapultepec Forest.
+Early in the morning @A went to the forest.
 SLANT
 depart A A_prevlocation
 enter A A_location
 go_hiking A ;CHANGED put this last
 
 ACT
-Went_Hunting_with 2
-POS
-P a 2 ; Mountains
-P b 2
-TEXT
-@A invited @B to go hunting to the Popocateplt volcano.
-SLANT
-depart A A_prevlocation
-;accompany B A CHANGED commented out
-depart B A_prevlocation ;CHANGED added moved up
-enter A A_location
-enter B A_location ;CHANGED added
-go_hunting A _ B ;CHANGED put last, added indirect
-
-ACT
-Went_Texcoco_Lake 1
+Went_Balea_Lake 1
 POS
 P a 1          ; a pos = Lake       {lake is equal to one}
 TEXT
-@A went to Texcoco Lake.
+@A went to Bâlea Lake.
 SLANT
 depart A A_prevlocation
 enter A A_location
 walk_by_the_water A ;CHANGED moved this from first to last
 
 ACT
-Went_Texcoco_Lake_with 2
+Went_Balea_Lake_with 2
 POS
 P a 1          ; a pos = Lake       {lake is equal to one}
 P b 1
 TEXT
-@A invited @B to walk by Texcoco Lake and enjoy the sunset.
+@A invited @B to walk by Bâlea Lake Lake and enjoy the sunset.
 SLANT
 depart A A_prevlocation
 ;accompany B A CHANGED commented out
@@ -898,23 +712,23 @@ enter B A_location ;CHANGED added
 walk_by_the_water A _ B ;CHANGED put last, added indirect
 
 ACT
-Went_Popocatepetl_Volcano 1
+Went_Mountains 1
 POS
 P a 2
 TEXT
-@A went to Popocateptl Volcano.
+@A went to the mountains.
 SLANT
 depart A A_prevlocation
 enter A A_location
 go_climbing A ;CHANGED put last
 
 ACT
-Went_Popocatepetl_Volcano_With 2
+Went_Mountins 2
 POS
 P a 2
 P b 2
 TEXT
-@A invited @B to go climbing to the Popocateptl Volcano.
+@A invited @B to go climbing in the the mountains.
 SLANT
 depart A A_prevlocation
 ;accompany B A CHANGED commented out
@@ -924,18 +738,18 @@ enter B A_location ;CHANGED added
 go_climbing A _ B ;CHANGED put last, added indirect
 
 ACT
-Went_Tlatelolco_Market 1
+Went_Cemetery 1
 POS
 P a 3
 TEXT
-@A decided to go shoping to the Tlatelolco Market.
+@A decided to take a shortcut over the cemetery.
 SLANT
 depart A A_prevlocation
 enter A A_location
 barter A ;CHANGED from go_shopping A, put last
 
 ACT
-Went_Tlatelolco_Market_with 2
+Went_Cemetery_with 2
 POS
 P a 3
 P b 3
@@ -948,7 +762,7 @@ enter B A_location ;CHANGED added
 go_shopping A _ B ;CHANGED put last, added indirect
 
 ACT
-Went_Palace 1
+Went_Castle 1
 POS
 P a 4
 TEXT
@@ -960,11 +774,11 @@ enter A A_location
 ;enter_the_palace A CHANGED put last then commented out
 
 ACT
-Went_Tenochtitlan_City 1
+Went_Village 1
 POS
 P a 5
 TEXT
-@A decided to go back to the Great Tenochtitlan city.
+@A decided to go back to the little Transylvanian village.
 SLANT
 ;move a
 ;return_to_the_city A A_prevlocation CHANGED commented out
@@ -972,13 +786,13 @@ depart A A_prevlocation
 enter A A_location
 
 ACT
-Went_Tenochtitlan_City_with 2
+Went_Village_with 2
 POS
 P a 5
 P b 5
 TEXT
-@A and @B went back home, to the Great Tenochtitlan city.
-@A and @B went to the Great Tenochtitlan City.
+@A and @B went back home, to the little Transylvanian village.
+@A and @B went to the little Transylvanian village.
 SLANT
 depart A A_prevlocation
 ;accompany A B CHANGED commented out
@@ -988,23 +802,23 @@ enter B A_location ;CHANGED added
 ;return_to_the_city A B CHANGED put last, added indirect, commented out
 
 ACT
-Went_Temple 1
+Went_Farmhouse 1
 POS
 P a 6
 TEXT
-@A went to Quetzalcoatl temple.
+@A went to the old farmhouse.
 SLANT
 ;move a CHANGED commented out
 depart A A_prevlocation
 enter A A_location
 
 ACT
-Went_Temple_With 2
+Went_Farmhouse_With 2
 POS
 P a 6
 P b 6
 TEXT
-@A went to Quetzalcoatl temple with @B.
+@A went to the old farmhouse with @B.
 SLANT
 depart A A_prevlocation
 depart B A_prevlocation ;CHANGED added moved up
@@ -1013,7 +827,7 @@ enter A A_location
 enter B A_location ;CHANGED added
 
 ACT
-Went_Jail 1
+Went_Tavern 1
 POS
 P a 7
 TEXT
@@ -1070,7 +884,7 @@ POS
 E a b +2 1
 E b a +2 1
 TEXT
-@A and @B had met in the teocalli (school). Since then they had been good friends.
+@A and @B had met in the school. Since then they had been good friends.
 SLANT
 like A B
 like B A

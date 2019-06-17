@@ -20,7 +20,6 @@ public enum CharacterName {
     Servant,
     Villager,
     Beauty,
-    Chaman,
     Not_Defined,
     Linked_Characters_A,
     Linked_Characters_B,
@@ -60,7 +59,6 @@ public enum CharacterName {
             case Servant:return "S";
             case Villager:return "VI";
             case Beauty: return "B";
-            case Chaman: return "C";
             default: return "UNK";
         }
     }
@@ -82,14 +80,13 @@ public enum CharacterName {
             case "S": return Servant;
             case "VI": return Villager;
             case "B": return Beauty;
-            case "C": return Chaman;
             default: return Not_Defined;
         }
     }
     
     /** Characters that can be selected for an action */
     private static CharacterName[] selectableCharacters = new CharacterName[] {
-            Dracula, Nosferatu, Count_Von_Krolock, Priest, Beauty, Chaman,
+            Dracula, Nosferatu, Count_Von_Krolock, Priest, Beauty,
             Lady, Virgin, Farmer, Hunter, Fisherman, Trader, Vampire_Researcher, Host, Servant, Villager
         };
     

@@ -21,7 +21,7 @@
         <location id="Village" name="Transylvanian village" article="the" />
         <location id="Tavern" name="tavern" article="the" />
         <location id="Lake" name="lake" article="the" />
-        <location id="Cemetry" name="cemetry" article="the" />
+        <location id="Cemetery" name="cemetry" article="the" />
         <location id="Mountains" name="mountains" article="the" />
         <location id="Castle" name="castle" article="the" />
         <location id="Farmhouse" name="Farmhose" article="the" />

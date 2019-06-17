@@ -8,7 +8,7 @@ public enum Position {
     NoWhere, 
     Lake, 
     Mountains,
-    Cemetry,
+    Cemetery,
     Castle,
     Village,
     Farmhouse,
@@ -27,7 +27,7 @@ public enum Position {
             case Village:
             case Tavern:
             case Lake:
-            case Cemetry:
+            case Cemetery:
             case Mountains:
             case Castle:
             case Farmhouse:
@@ -42,7 +42,7 @@ public enum Position {
      * List of positions selectable in a story
      */
     private static final Position[] selectablePositions = new Position[] {
-        Lake, Mountains, Cemetry, Castle, Village, Farmhouse, Tavern
+        Lake, Mountains, Cemetery, Castle, Village, Farmhouse, Tavern
     };
     
     public static Position[] getSelectablePositions() {
@@ -54,7 +54,7 @@ public enum Position {
             case Village: return "5";
             case Tavern: return "7";
             case Lake: return "1";
-            case Cemetry: return "3";
+            case Cemetery: return "3";
             case Mountains: return "2";
             case NoWhere: return "0";
             case OtherCharactersPosition: return "b_pos";
