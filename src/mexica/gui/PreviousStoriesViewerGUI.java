@@ -22,6 +22,7 @@ public class PreviousStoriesViewerGUI extends javax.swing.JDialog {
         storyModel = new DefaultListModel<>();
         actionsModel = new DefaultListModel<>();
         initComponents();
+        MexicaRepository.getInstance().loadData();
         loadPreviousStories();
     }
 
