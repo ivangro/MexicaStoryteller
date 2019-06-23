@@ -128,6 +128,7 @@ public class ConditionComparer {
             ans = (type1.equals(TensionType.PrisonerFree) && type2.equals(TensionType.Prisoner));
             ans |= (type1.equals(TensionType.HealthNormal) && type2.equals(TensionType.HealthAtRisk));
             ans |= (type1.equals(TensionType.LifeNormal) && type2.equals(TensionType.LifeAtRisk));
+            ans |= (type1.equals(TensionType.ActorHuman) && type2.equals(TensionType.ActorVampire));
             if (MexicaParameters.ENABLE_SOCIAL_ANALYSIS) {
                 ans |= (type1.equals(TensionType.SocialBurdenNormal) && type2.equals(TensionType.SocialBurden));
                 ans |= (type1.equals(TensionType.SocialDisobedienceNormal) && type2.equals(TensionType.SocialDisobedience));

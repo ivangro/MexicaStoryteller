@@ -59,7 +59,7 @@ public class Atom {
     
     /**
      * Adds the tension counters read from the file in the following order:
-     *  AD, Lr, Hr, Pd, Pr, Ce, Lc
+     *  AD, Lr, Hr, Pd, Pr, Ce, Lc, Av
      * @param counters 
      */
     public void addTensionCounters(String... counters) {
@@ -74,6 +74,7 @@ public class Atom {
         getTensionCount().put(TensionType.Prisoner, values[4]);
         getTensionCount().put(TensionType.ClashingEmotions, values[5]);
         getTensionCount().put(TensionType.LoveCompetition, values[6]);
+        getTensionCount().put(TensionType.ActorVampire, values[7]);
     }
     
     /**

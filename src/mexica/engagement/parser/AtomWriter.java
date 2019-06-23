@@ -93,6 +93,7 @@ public class AtomWriter {
                 case Prisoner: tensionTypes[4]++;break;
                 case ClashingEmotions: tensionTypes[5]++;break;
                 case LoveCompetition: tensionTypes[6]++;break;
+                case ActorVampire: tensionTypes[7]++;break;
             }
         }
         

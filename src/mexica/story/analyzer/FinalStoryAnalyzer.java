@@ -112,6 +112,9 @@ public class FinalStoryAnalyzer {
             case Prisoner:
                 actionName += "Pr_Free_" + ((names.length == 2) ? 1: 2);
                 break;
+            case ActorVampire:
+                actionName += "Actor_Vampire_" + ((names.length == 2) ? 1: 2);
+                break;
         }
         action.setActionName(actionName);
         

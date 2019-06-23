@@ -26,9 +26,9 @@ public class AtomParser {
      */
     public static final String ATOM_DEFINITION = "\\s*\\*{2}\\s*Atom\\s*(\\[\\d+(,\\s*\\d+)*\\])(\\s*(\\w+))?.*";
     /**
-     * FeaTen=> AD->number  Lr->number  Hr->number  Pd->number  Pr->number  Ce->number  Lc->number
+     * FeaTen=> AD->number  Lr->number  Hr->number  Pd->number  Pr->number  Ce->number  Lc->number  Av->number
      */
-    public static final String ATOM_TENSION_COUNT = "\\s*FeaTen=\\>\\s+AD-\\>(\\d+)\\s+Lr-\\>(\\d+)\\s+Hr-\\>(\\d+)\\s+Pd-\\>(\\d+)\\s+Pr-\\>(\\d+)\\s+Ce-\\>(\\d+)\\s+Lc-\\>(\\d+).*";
+    public static final String ATOM_TENSION_COUNT = "\\s*FeaTen=\\>\\s+AD-\\>(\\d+)\\s+Lr-\\>(\\d+)\\s+Hr-\\>(\\d+)\\s+Pd-\\>(\\d+)\\s+Pr-\\>(\\d+)\\s+Ce-\\>(\\d+)\\s+Lc-\\>(\\d+)\\s+Av-\\>.*";
     /**
      * FeaEmoLin=>   Type1->number    Type2->number    Type3->number    Type4->number  
      */
@@ -118,7 +118,7 @@ public class AtomParser {
         m = pTensionCount.matcher(nextLine);
         if (m.matches())
         {
-            currentAtom.addTensionCounters(m.group(1),m.group(2),m.group(3),m.group(4),m.group(5),m.group(6),m.group(7));
+            currentAtom.addTensionCounters(m.group(1),m.group(2),m.group(3),m.group(4),m.group(5),m.group(6),m.group(7),m.group(7));
             return true;
         }
         m = pEmotionCount.matcher(nextLine);

@@ -46,13 +46,23 @@ TEXT
 @A's frame of mind was very volatile and without thinking about it @A charged against @B.
 
 ACT
-became_free 1
+Became_free 1
 PRE
 T Pr a *
 TEN
 T Pf a
 TEXT
 With a hidden knife @A was able to cut all the ropes and escape.
+
+ACT
+Bit 2
+PRE
+T Av a
+T Ah b
+TEN
+T Av b
+TEXT
+@A felt fresh blood within close proximity and directly turned his head. @B started shaking, but it was too late - no time to escape. In the second @B felt a deep hurt in the neck and lost consciousness. A few hours later a new vampire would come to life.
 
 ACT
 Commited_Suicide 1

@@ -269,6 +269,7 @@ public class AvatarContext extends StoryContextListener implements Cloneable {
                 case ClashingEmotions:
                 case HealthAtRisk:
                 case LifeAtRisk:
+                case ActorVampire:
                 case LoveCompetition:
                     addTension = true;
                     MexicaRepository.getInstance().getStoryAnalyzer().addSpecialTension(condition);
@@ -278,6 +279,7 @@ public class AvatarContext extends StoryContextListener implements Cloneable {
                 case Prisoner:
                     addTension = true;
                     break;
+                case ActorHuman:
                 case HealthNormal:
                 case LifeNormal:
                 case PrisonerFree:

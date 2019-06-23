@@ -5,6 +5,8 @@ package mexica.core;
  * @author Ivan Guerrero (UNAM, Mexico)
  */
 public enum TensionType {
+  ActorVampire,
+  ActorHuman,
   ActorDead,
   LifeAtRisk,
   HealthAtRisk,
@@ -24,6 +26,8 @@ public enum TensionType {
 
     public static String getAbbreviation(TensionType tension) {
         switch (tension) {
+            case ActorVampire: return "Av";
+            case ActorHuman: return "Ah";
             case ActorDead: return "Ad";
             case ClashingEmotions: return "Ce";
             case HealthAtRisk: return "Hr";
@@ -49,6 +53,8 @@ public enum TensionType {
             case "Dead":
             case "Ad": 
                 return ActorDead;
+            case "Av": return ActorVampire;
+            case "Ah": return ActorHuman;
             case "Ce": return ClashingEmotions;
             case "Hr": return HealthAtRisk;
             case "Hn": return HealthNormal;
@@ -75,6 +81,7 @@ public enum TensionType {
      */
     public static boolean isTensionDeactivator(TensionType tension) {
         switch (tension) {
+            case ActorHuman:
             case HealthNormal:
             case LifeNormal:
             case PrisonerFree:
@@ -101,6 +108,7 @@ public enum TensionType {
             case HealthAtRisk:
             case LifeAtRisk:
             case Prisoner:
+            case ActorVampire:
                 return true;
             default:
                 return false;
