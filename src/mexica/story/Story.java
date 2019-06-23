@@ -388,8 +388,9 @@ public class Story extends StoryContextListener {
 
     public void setImpasseDetected(boolean impasseDetected) {
         storyMeta.setImpasseDetected(impasseDetected);
-        if (storyMeta.getImpasses() > MexicaParameters.MAX_IMPASSES)
-            getGuidelines().addGuideline(Guideline.endStory, "Multiple impasses during the story");
+        if (storyMeta.getImpasses() > MexicaParameters.MAX_IMPASSES) {
+            getGuidelines().addGuideline(this, Guideline.endStory, "Multiple impasses during the story");
+        }
     }
     
     public boolean getImpasseDetected() {

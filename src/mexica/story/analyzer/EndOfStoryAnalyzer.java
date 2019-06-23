@@ -26,19 +26,19 @@ public class EndOfStoryAnalyzer {
         
         //If the number of actions in the current story has reached the limit, end the story
         if (story.getActions().size() >= MexicaParameters.MAX_ACTIONS_IN_STORY) {
-            story.getGuidelines().addGuideline(Guideline.endStory, "MaximumActions");
+            story.getGuidelines().addGuideline(story, Guideline.endStory, "MaximumActions");
             Logger.getGlobal().log(Level.FINE, "End of story by number of actions: {0}", story.getActions().size());
             StoryLog.addMessage(story, "End of story, max number of actions reached.");
         }
         //When all the characters are dead, end the story
         else if (story.getAvatarFactory().getActiveCharacters(false, story.getCurrentYear()-1).isEmpty()) {
-            story.getGuidelines().addGuideline(Guideline.endStory, "DeadCharacters");
+            story.getGuidelines().addGuideline(story, Guideline.endStory, "DeadCharacters");
             Logger.getGlobal().log(Level.FINE, "End of story by dead characters");
             StoryLog.addMessage(story, "End of story, all characters are dead.");
         }
         //When two consecutive impasse have been detected, end the story
         else if (impasseCount > MAX_IMPASSE_COUNT) {
-            story.getGuidelines().addGuideline(Guideline.endStory, "MultipleImpasses");
+            story.getGuidelines().addGuideline(story, Guideline.endStory, "MultipleImpasses");
             Logger.getGlobal().log(Level.FINE, "End of story by multiple impasses: {0}", impasseCount);
             StoryLog.addMessage(story, "End of story, multiple impasses found.");
         }

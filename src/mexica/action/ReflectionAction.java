@@ -61,7 +61,7 @@ public class ReflectionAction extends AbstractAction{
         MexicaParameters.ENABLE_ILLOGICAL_ACTIONS = true;
         if (impasseDetected) {
             if (!attempToBreakImpasse()) {
-                story.getGuidelines().addGuideline(Guideline.endStory, "Impasse");
+                story.getGuidelines().addGuideline(story, Guideline.endStory, "Impasse");
             }
             else
                 impasseDetected = false;

@@ -37,7 +37,7 @@ public class Guidelines {
         return guidelines.add(guideline);
     }
     
-    public boolean addGuideline(Guideline guideline, String reason) {
+    public boolean addGuideline(Story story, Guideline guideline, String reason) {
         Logger.getGlobal().log(Level.FINE, "Guideline added: {0}", guideline);
         if (guideline == Guideline.endStory)
             story.setFinished(true, reason);
