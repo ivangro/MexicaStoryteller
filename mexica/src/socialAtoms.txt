@@ -1,0 +1,66 @@
+*Tension:3 EmoLin:2
+	**Atom [0] Coward_Fighter
+		FeaTen=> AD->0 Lr->1 Hr->0 Pd->2 Pr->0 Ce->0 Lc->0 Av->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):cCK
+				cCK(-3,1):A
+			Tension=>
+				-Pd(cCK):A
+				-Lr(cCK):A
+				-Pd(A):cCK
+	**Atom [1] Coward_Fighter
+		FeaTen=> AD->0 Lr->1 Hr->0 Pd->2 Pr->0 Ce->0 Lc->0 Av->0
+		FeaEmoLin=> Type1->2 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				A(-3,1):cN
+				cN(-3,1):A
+			Tension=>
+				-Pd(cN):A
+				-Lr(cN):A
+				-Pd(A):cN
+*Tension:1 EmoLin:1
+	**Atom [0] Disrespectful_Behavior
+		FeaTen=> AD->0 Lr->0 Hr->1 Pd->0 Pr->0 Ce->0 Lc->0 Av->0
+		FeaEmoLin=> Type1->1 Type2->0 Type3->0 Type4->0
+			EmoLin=>
+				+B(-2,1):A
+			Tension=>
+				Hr(B):P
+			Relation=>
+				Rel=>social -1
+*Tension:0 EmoLin:3
+	**Atom [2] Divine_Disobedience
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0 Av->0
+		FeaEmoLin=> Type1->1 Type2->2 Type3->0 Type4->0
+			EmoLin=>
+				A(3,2):B
+				B(3,2):A
+				+B(3,1):A
+			Tension=>
+*Tension:0 EmoLin:2
+	**Atom [3] Sacred_Love
+		FeaTen=> AD->0 Lr->0 Hr->0 Pd->0 Pr->0 Ce->0 Lc->0 Av->0
+		FeaEmoLin=> Type1->1 Type2->1 Type3->0 Type4->0
+			EmoLin=>
+				cPt(1,1):A
+				+cPt(3,2):A
+			Tension=>
+*Tension:5 EmoLin:5
+	**Atom [4] Gender_Violence
+		FeaTen=> AD->0 Lr->1 Hr->1 Pd->2 Pr->0 Ce->1 Lc->0 Av->0
+		FeaEmoLin=> Type1->4 Type2->1 Type3->0 Type4->0
+			EmoLin=>
+				A(2,1):B
+				A(3,2):B
+				B(-2,1):A
+				A(-3,1):B
+				+A(-3,1):B
+			Tension=>
+				Ce(A):B
+				Lr(A):B
+				Pd(B):A
+				+Hr(B):A
+				+Pd(A):B
+			Relation=>
+				Rel=>gender 1

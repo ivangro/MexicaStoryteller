@@ -176,7 +176,17 @@ T Hr a *
 TEN
 T Ad a
 TEXT
-The injuries that @A received were very serious, he didn't have achance to survive and died.
+The injuries that @A received were very serious, he didn't have a chance to survive and died.
+
+ACT
+drove_a_stake_through_the_heart_of 2
+PRE
+T Av b
+T Ah a
+TEN
+T Ad b
+TEXT
+@A took the moment and drove a stake through @B's heart. @B gave a deep scream and in the next moment went to dust.
 
 ACT
 Escaped 1
