@@ -41,6 +41,30 @@ public enum CharacterName {
         }
         return Not_Defined;
     }
+
+    public boolean isVampire(CharacterName name) {
+        switch (name) {
+            case Dracula:
+            case Nosferatu:
+            case Count_Von_Krolock:
+                return true;
+
+            case Priest:
+            case Lady:
+            case Virgin:
+            case Farmer:
+            case Hunter:
+            case Fisherman:
+            case Trader:
+            case Vampire_Researcher:
+            case Host:
+            case Servant:
+            case Villager:
+            case Beauty:
+            default:
+                return false;
+        }
+    }
     
     public static String getAbbreviation(CharacterName name) {
         switch (name) {

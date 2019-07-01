@@ -23,10 +23,19 @@ public class Avatar implements Cloneable {
     private AvatarContext context;
     private boolean active;
     private boolean alive;
+    private boolean isVampire;
     private int yearOfBirth, yearOfDeath;
     private Story story;
     private Set<Position> positionsVisited;
-    
+
+    public boolean isVampire() {
+        return isVampire;
+    }
+
+    public void becomeVampire() {
+        isVampire = true;
+    }
+
     public Avatar(int ID, CharacterName name, Story story) {
         this.story = story;
         this.name = name;
@@ -35,6 +44,7 @@ public class Avatar implements Cloneable {
         context = new AvatarContext(name, story);
         active = false;
         alive = true;
+        isVampire = name.isVampire(name);
         yearOfBirth = -1;
         yearOfDeath = -1;
         positionsVisited = EnumSet.noneOf(Position.class);
@@ -107,6 +117,8 @@ public class Avatar implements Cloneable {
     public boolean isAlive() {
         return alive;
     }
+
+
     
     /**
      * Validates if the character was alive at the given year

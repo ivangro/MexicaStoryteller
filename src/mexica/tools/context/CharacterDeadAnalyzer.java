@@ -22,12 +22,17 @@ public class CharacterDeadAnalyzer implements IAnalyzer {
     @Override
     public void analyze(AvatarContext context) {
         List<CharacterName> deads = new ArrayList<>();
+        List<CharacterName> vampires = new ArrayList<>();
         
         for (ConditionInstantiated instance : context.getFacts()) {
             switch (instance.getType()) {
                 case Tension:
-                    if (instance.getCondition().getTension().equals(TensionType.ActorDead))
+                    if (instance.getCondition().getTension().equals(TensionType.ActorDead)) {
                         deads.add(instance.getCharacterA());
+                    }
+                    if (instance.getCondition().getTension().equals(TensionType.ActorVampire)) {
+                        vampires.add(instance.getCharacterA());
+                    }
                     break;
             }
         }
@@ -43,6 +48,14 @@ public class CharacterDeadAnalyzer implements IAnalyzer {
 
             if (avatar.isAlive()) {
                 avatar.kill(story.getCurrentYear());
+            }
+        }
+
+        for (CharacterName name : vampires) {
+            Avatar avatar = story.getAvatarFactory().getAvatar(name);
+
+            if (!avatar.isVampire()) {
+                avatar.becomeVampire();
             }
         }
     }
