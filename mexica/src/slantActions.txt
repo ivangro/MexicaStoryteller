@@ -204,7 +204,7 @@ T Lr a *
 TEN
 T Dead a *
 TEXT
-Even when @A made a great effort to survive, the gods called @A to join them.
+Even when @A made a great effort to survive, it didn't have a good outcome.
 SLANT
 try_to_survive A
 die A
@@ -244,15 +244,6 @@ TEXT
 Although at the beginning @A did not want to admit it, @A fell in love with @B.
 SLANT
 entrance B A ;CHANGED
-
-ACT
-felt_envy_for 2
-POS
-E a b -1 1
-TEXT
-@A perceived how @B was a richer person. Since @A was a very ambitious person, @A developed a envy for @B's social position.
-SLANT
-become_jealous_of a b
 
 ACT
 Felt_Guilty_With 2
